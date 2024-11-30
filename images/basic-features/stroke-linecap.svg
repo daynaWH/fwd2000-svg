@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 9273.3 6681.2">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 500px;
+      }
+    </style>
+  </defs>
+  <path d="M537.2,3000.1h8227.2c276,0,500,224,500,500h0c0,276-224,500-500,500H537.2c-276,0-500-224-500-500h0c0-276,224-500,500-500Z"/>
+  <rect x="36.1" y="5130.1" width="9229.3" height="1000"/>
+  <rect x="943.8" y="878.7" width="7413.9" height="1000"/>
+  <text class="st0" transform="translate(2150.2 5753.6)"><tspan x="0" y="0">stroke-linecap=&quot;square&quot;</tspan></text>
+  <text/>
+  <text class="st0" transform="translate(2218.7 3644.1)"><tspan x="0" y="0">stroke-linecap=&quot;round&quot;</tspan></text>
+  <text class="st0" transform="translate(2407.2 1544.3)"><tspan x="0" y="0">stroke-linecap=&quot;butt&quot;</tspan></text>
+</svg>

@@ -132,6 +132,209 @@
                     </div>
                 </ol>
             </section>
+
+            <!-- Basic Features - Dayna -->
+            <section class="basic-features" id="basic-features">
+                <h2>Basic SVG Features</h2>
+                <ul>
+                    <li>Basic Shapes</li>
+                    <ul>
+                        <li>
+                            <code
+                                >rect, circle, ellipse, line, polyline,
+                                polygon</code
+                            >
+                        </li>
+                    </ul>
+                    <p>
+                        With SVG we can create basic shapes, and each has their
+                        own attributes to define. For example, their dimensions
+                        or radius if it's a circle.
+                    </p>
+                    <p>
+                        The <code>path</code> element is used to create more
+                        complex shapes using lines and curves. This element is
+                        often found in SVG files obtained from online sources.
+                        The <code>d</code> attribute is used to define the path.
+                    </p>
+                    <button class="basic-demo-btn">Code Demo &#9660;</button>
+                    <div class="basic-demo-desc">
+                        <pre>
+                        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;blue&quot; /&gt;
+                            &lt;circle cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;50&quot; fill=&quot;yellow&quot; /&gt;
+                        &lt;/svg&gt;
+                        </pre>
+                        <img
+                            src="images/basic-features/basic-shape_1.svg"
+                            alt="Yellow circle inside a blue rectangle"
+                        />
+
+                        <!-- Code from https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path -->
+                        <pre>
+                        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M 10,30
+                                    A 20,20 0,0,1 50,30
+                                    A 20,20 0,0,1 90,30
+                                    Q 90,60 50,90
+                                    Q 10,60 10,30 z&quot; /&gt;
+                        &lt;/svg&gt;
+                        </pre>
+                        <img
+                            src="images/basic-features/basic-shape_2.png"
+                            alt="A black heart"
+                        />
+                    </div>
+
+                    <li>Fill</li>
+                    <p>
+                        <span>Fill</span> sets the color of the inside of the
+                        shapes. Within the <code>fill</code> element, we can use
+                        more specific attributes:
+                    </p>
+                    <ul>
+                        <li><code>fill-opacity</code>: 0 to 1 | 0 to 100%</li>
+                        <li>
+                            <code>fill-rule</code>: "non-zero" | "evenodd"
+                            <ul>
+                                <li>
+                                    <code>fill-rule</code>
+                                    sets the color of the part where the shapes
+                                    overlap.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="basic-demo-btn">Code Demo &#9660;</button>
+                    <div class="basic-demo-desc">
+                        <!-- points value from https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule -->
+                        <pre>
+                    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                        &lt;polygon fill=&quot;green&quot; fill-opacity=&quot;0.5&quot; fill-rule=&quot;evenodd&quot;
+                                 points=&quot;50,0 21,90 98,35 2,35 79,90&quot; /&gt;
+                    &lt;/svg&gt;
+                    </pre
+                        >
+                        <img
+                            src="images/basic-features/fill-rule.svg"
+                            alt="Green star that is transparent in the middle"
+                        />
+                    </div>
+
+                    <li>Stroke</li>
+                    <p>
+                        While fill affects the color of the inside,
+                        <span>stroke</span> sets the color of the border of the
+                        shapes. Stroke also has multiple attributes such as
+                        stroke-width, opacity, linecap and linejoin.
+                    </p>
+                    <ul>
+                        <li><code>stroke-width</code></li>
+                        <li><code>stroke-opacity</code></li>
+                        <li>
+                            <code>stroke-linecap</code>: "butt" | "round" |
+                            "square"
+                            <ul>
+                                <li>
+                                    Linecap defines how the end of the stroke
+                                    is, for example, rounded or angled.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <code>stroke-linejoin</code>: "miter" | "bevel" |
+                            "round"
+                            <ul>
+                                <li>
+                                    The line-join property sets how the meeting
+                                    point of the strokes look.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="basic-demo-btn">Code Demo &#9660;</button>
+                    <div class="basic-demo-desc">
+                        <img
+                            src="images/basic-features/stroke-linecap.svg"
+                            alt="Three lines with butt, round and square stroke-linecap"
+                        />
+                        <img
+                            src="images/basic-features/stroke-linejoin.svg"
+                            alt="Three triangles with miter, bevel and round stroke-linejoin"
+                        />
+                    </div>
+
+                    <li>Gradient</li>
+                    <ul>
+                        <li><code>linearGradient</code></li>
+                        <li><code>radialGradient</code></li>
+                    </ul>
+                    <p>
+                        Two types of gradient are used to create color
+                        gradations in SVG; linear or radial. They each use
+                        different attributes. For example, linearGradient uses
+                        x1, x2, y1, y2 while radialGradient uses cx, cy, fx, fy,
+                        and r and both include offset and stop-color. The
+                        attributes are defined within the
+                        <code>linearGradient</code> tag element, which is nested
+                        within the <code>defs</code> element.
+                    </p>
+                    <button class="basic-demo-btn">Code Demo &#9660;</button>
+                    <div class="basic-demo-desc">
+                        <pre>
+                        &lt;svg viewBox=&quot;-20 30 300 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;defs&gt;
+                                &lt;linearGradient id=&quot;linear-grad&quot; x1=&quot;0&quot; x2=&quot;50%&quot; y1=&quot;50%&quot;y2=&quot;0&quot;&gt;
+                                    &lt;stop offset=&quot;0%&quot; stop-color=&quot;blue&quot; /&gt;
+                                    &lt;stop offset=&quot;100%&quot; stop-color=&quot;green&quot; /&gt;
+                                &lt;/linearGradient&gt;
+    
+                                &lt;radialGradient id=&quot;radial-grad&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;50%&quot;&gt;
+                                    &lt;stop offset=&quot;0%&quot; stop-color=&quot;blue&quot; /&gt;
+                                    &lt;stop offset=&quot;100%&quot; stop-color=&quot;green&quot; /&gt;
+                                &lt;/radialGradient&gt;
+                            &lt;/defs&gt;
+                            
+                            &lt;circle cx=&quot;0&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;url(#linear-grad)&quot; /&gt;
+                            &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;url(#radial-grad)&quot; /&gt;
+                        &lt;/svg&gt;
+                        </pre>
+                        <img src="images/basic-features/gradient.png" alt="" />
+                    </div>
+
+                    <li>Transform</li>
+                    <p>
+                        Another basic feature of SVG is <span>transform</span>,
+                        which is similar to the transform property in CSS. It
+                        applies transformation to elements nested in the svg
+                        element, and multiple transformations can be added at
+                        the same time. Some examples of transform are listed
+                        below.
+                    </p>
+                    <ul>
+                        <li><code>translate</code> (x y)</li>
+                        <li><code>rotate</code> (degree)</li>
+                        <li><code>scale</code> (x y)</li>
+                        <li>
+                            <code>skewX</code> (degree)
+                            <code>skewY</code> (degree)
+                        </li>
+                    </ul>
+                    <button class="basic-demo-btn">Code Demo &#9660;</button>
+                    <div class="basic-demo-desc">
+                        <pre>
+                        &lt;svg height=&quot;300&quot; width=&quot;500&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;rect height=&quot;100&quot; width=&quot;200&quot; y=&quot;70&quot; /&gt;
+                            &lt;rect height=&quot;100&quot; width=&quot;200&quot; transform=&quot;translate(400 10) scale(1.2 0.8) rotate(90) skewX(30)&quot; /&gt;
+                        &lt;/svg&gt;
+                        </pre>
+                        <img
+                            src="images/basic-features/transform.svg"
+                            alt="One black rectangle and another with transform properties"
+                        />
+                    </div>
+                </ul>
+            </section>
         </main>
         <footer></footer>
     </body>

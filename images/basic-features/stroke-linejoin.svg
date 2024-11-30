@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 15463.9 4906.2">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #010101;
+      }
+
+      .st2 {
+        fill: #231f20;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 500px;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M2344.7,104.9L412.3,4020.9h3864.9L2344.7,104.9ZM2343.8,911.2l1452.4,2802.1H891.4L2343.8,911.2Z"/>
+  <path class="st1" d="M7735.6,344.3h-337.6l-1720.6,3486.6,138.2,180.8h3459.1l151.3-241.9L7735.6,344.3ZM6078.8,3696.8l1487.1-2869,1487.1,2869h-2974.1Z"/>
+  <g>
+    <polygon class="st0" points="11410.4 3676.2 14330.7 3676.2 12870.5 679.4 11410.4 3676.2"/>
+    <path class="st1" d="M14759.6,3774.9l-1706-3501.6c-34-69.8-110-106-183-93.6-73.1-12.5-149,23.8-183,93.6l-1706,3501.6c-41.2,84.6-5.7,187.7,78.9,228.9h0c32.9,16,68.5,20.3,102.2,14.8.4,0,.7,0,1.1,0h3415.1c33.6,5.4,69.1,1.1,101.9-14.9h0c84.6-41.2,120.2-144.2,78.9-228.9ZM11410.4,3676.2l1460.1-2996.9,1460.1,2996.9h-2920.2Z"/>
+  </g>
+  <text class="st2" transform="translate(114 4651.1)"><tspan x="0" y="0">stroke-linejoin=&quot;miter&quot;</tspan></text>
+  <text class="st2" transform="translate(5269 4651.1)"><tspan x="0" y="0">stroke-linejoin=&quot;bevel&quot;</tspan></text>
+  <text class="st2" transform="translate(10504.8 4651.1)"><tspan x="0" y="0">stroke-linejoin=&quot;round&quot;</tspan></text>
+</svg>
