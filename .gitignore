@@ -83,8 +83,9 @@ node_modules/
 
 
 # Ignore compiled CSS from repository
+#### Do not ignore ####
 
-styles/
+# styles/
 
 
 # Misc files to ignore #
