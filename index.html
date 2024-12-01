@@ -211,7 +211,7 @@
                         <pre>
                     &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
                         &lt;polygon fill=&quot;green&quot; fill-opacity=&quot;0.5&quot; fill-rule=&quot;evenodd&quot;
-                                 points=&quot;50,0 21,90 98,35 2,35 79,90&quot; /&gt;
+                                points=&quot;50,0 21,90 98,35 2,35 79,90&quot; /&gt;
                     &lt;/svg&gt;
                     </pre
                         >
@@ -334,6 +334,165 @@
                         />
                     </div>
                 </ul>
+            </section>
+
+            <!-- Interactivity with SVG - Ricky-->
+            <section class="svg-interactivity">
+                <h2>Interactivity with SVG</h2>
+                <p>
+                    SVG (Scalable Vector Graphics) can be interactive, meaning it can respond to user input. Here are some ways to make SVG interactive:
+                </p>
+                <ul>
+                    <li>
+                        <strong>CSS:</strong> Excellent for hover effects, transitions, and animations triggered by pseudo-classes or classes.
+                    </li>
+                    <li>
+                        <strong>JavaScript:</strong> Adds dynamic behavior like starting animations on clicks, toggling classes, or handling custom user interactions. For example, you can use 
+                        <code>document.getElementById</code> to select an SVG element by its ID.
+                    </li>
+                    <li>
+                        <strong>Click-triggered Animations:</strong> Set animations to trigger only on user clicks, allowing actions like scaling, morphing, or self-drawing to occur when a clickable element is activated.
+                    </li>
+                </ul>
+                <h3>HTML Format for an SVG</h3>
+                <p>
+                    Here is an example of how an SVG is structured in HTML. In this case, a simple blue circle is defined:
+                </p>
+                <pre>
+                    &lt;!-- SVG Element of a blue circle --&gt;
+                    &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 505 505"&gt;
+                        &lt;circle cx="252.5" cy="252.5" r="252.5" fill="#001bdb"/&gt;
+                    &lt;/svg&gt;
+                </pre>
+                <svg id="circleSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 505 505">
+                    <circle
+                        cx="252.5"
+                        cy="252.5"
+                        r="100"
+                        fill="#001bdb"
+                    ></circle>
+                </svg>
+
+                <h3>Complex Shapes with the <code>&lt;path&gt;</code> Element</h3>
+                <p>
+                    Besides that, there's also a <code>&lt;path&gt;</code> element which is used to define complex shapes or lines that cannot be easily created with basic SVG elements like <code>&lt;circle&gt;</code>, <code>&lt;rect&gt;</code>, or <code>&lt;polygon&gt;</code>. It's one of the most versatile and powerful elements in SVG, allowing you to draw almost any shape.
+                </p>
+                <p>Here's an example of a heart shape created with the <code>&lt;path&gt;</code> element:</p>
+                <pre>
+                    &lt;svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"&gt;
+                    &lt;path d="M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 Z" fill="red"/&gt;
+                    &lt;/svg&gt;
+                </pre>
+                <div class="example-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+                        <path
+                            d="M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 Z"
+                            fill="red"
+                        ></path>
+                    </svg>
+                </div>
+                <h3>Using CSS for SVG Interactivity</h3>
+                <p>Below is a demonstration of how you can use CSS to add interactivity to SVG elements like paths or shapes.</p>
+
+                    <h4>Code Snippet</h4>
+                    <pre>
+                    .hoverCircle {
+                        transition: fill 0.3s ease;
+                    }
+                    .hoverCircle:hover {
+                        fill: #00ff00;
+                    }
+                    </pre>
+                    
+                    <h4>Output</h4>
+                    <div class="interactivity-hover-demo">
+                        <div class="interactivity-hover-state">
+                            <p>Before hover</p>
+                            <img src="images/interactivity-with-svg/css-output-b4-hover.png" alt="Before hover state">
+                        </div>
+
+                        <div class="interactivity-hover-state">
+                            <p>After Hover</p>
+                            <img src="images/interactivity-with-svg/css-output-after-hover.png" alt="After hover state">
+                        </div>
+                    </div>
+
+                    <h3>Using Javscript for SVG Interactivity</h3>
+                    <p>Below is a demonstration of how you can use Javascript to add interactivity to SVG elements like paths or shapes.</p>
+    
+                        <h4>Code Snippet</h4>
+                        <pre>
+                        const interactiveCircle = document.querySelector("#interactiveCircle");
+
+                        interactiveCircle.addEventListener("click", () => {
+                            const currentColor = interactiveCircle.getAttribute("fill");
+                            interactiveCircle.setAttribute("fill", currentColor === "#001bdb" ? "#db0000" : "#001bdb")
+                        });
+                        </pre>
+                        
+                        <h4>Output</h4>
+                        <div class="interactivity-toggle-demo">
+                            <div class="interactivity-toggle">
+                                <p>Before hover</p>
+                                <img src="images/interactivity-with-svg/js-output-b4-toggle.png" alt="Before toggle">
+                            </div>
+    
+                            <div class="interactivity-toggle">
+                                <p>After Hover</p>
+                                <img src="images/interactivity-with-svg/js-output-after-toggle.png" alt="After toggle">
+                            </div>
+                        </div>
+
+                        <h3>Using CSS & Javascript together for SVG Interactivity</h3>
+                    <p>Below is a demonstration of how you can use CSS & Javascript together to add interactivity to SVG elements like paths or shapes.</p>
+    
+                        <h4>Code Snippet</h4>
+                            <h5>CSS</h5>
+                            <pre>
+                                /* Default circle style */
+                                .hoverCircle {
+                                    fill: #001bdb;
+                                    transition: transform 0.3s ease, fill 0.3s ease; /* Smooth transitions */
+                                }
+                                
+                                /* Hover effect */
+                                .hoverCircle:hover {
+                                    fill: #00dbdb; /* Change color to teal on hover */
+                                }
+                            </pre>
+
+                            <h5>Javascript</h5>
+                            <pre>
+                                const interactiveCircle = document.querySelector("#interactiveCircle");
+
+                                // Add a click event listener to toggle scale
+                                interactiveCircle.addEventListener("click", () => {
+                                const isScaled = interactiveCircle.getAttribute("transform");
+                                if (isScaled) {
+                                    interactiveCircle.removeAttribute("transform");
+                                } else {
+                                    interactiveCircle.setAttribute("transform", "scale(1.2)"); // Enlarge the circle slightly
+                                }
+                                });
+                            </pre>
+                        
+                        <h4>Output</h4>
+                        <div class="interactivity-hover-toggle-demo">
+                            <div class="interactivity-hover-toggle">
+                                <p>Before hover</p>
+                                <img src="images/interactivity-with-svg/css-js-output-b4-hover.png" alt="Before hover state">
+                            </div>
+    
+                            <div class="interactivity-hover-toggle">
+                                <p>After Hover</p>
+                                <img src="images/interactivity-with-svg/css-js-output-after-hover.png" alt="After hover state">
+                            </div>
+
+                            <div class="interactivity-hover-toggle">
+                                <p>When toggled</p>
+                                <img src="images/interactivity-with-svg/css-js-output-toggled.png" alt="When toggled">
+                            </div> 
+                        </div>
             </section>
         </main>
         <footer></footer>
