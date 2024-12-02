@@ -494,6 +494,61 @@
                             </div> 
                         </div>
             </section>
+            <!-- Pros and Cons with SVG - Ricky -->
+            <section class="svg-pros-and-cons">
+                <h2>Pros and Cons of SVG</h2>
+            
+                <!-- Pros Section -->
+                <h3>Pros</h3>
+                    <ul>
+                        <li><strong>Scalability:</strong> Unlike raster images that generally are constrained by a definite monitor resolution, SVG images qualify in being resolution-independent and cater to responsive web design.</li>
+                        <li><strong>Small File Size:</strong> SVG files are ideal due to their smaller size relative to raster graphics (JPEG or PNG). This reduces states of loading time.</li>
+                        <li><strong>Print Quality:</strong> SVG's quality remains intact while printing unlike raster images that can sometimes become pixelated.</li>
+                        <li><strong>Accessibility:</strong> SVG files support multimedia elements such as metadata which can be beneficial for accessibility and SEO purposes.</li>
+                        <li><strong>Interactivity:</strong> Hover effects and click events can be embedded in SVG to create interactive graphics and charts.</li>
+                        <li><strong>Manipulability:</strong> SVGs are XML-based and they can be manipulated using CSS and JavaScript. This provides room for dynamic effects, animations, and easy styling.</li>
+                    </ul>
+                    <p>Below is an example comparing raster and vector image quality when zoomed in. Notice how the vector (SVG) retains its sharpness while the raster image becomes pixelated.</p>
+                        <figure>
+                            <img src="images/pros-and-cons-of-svg/pros-raster-vs-vector.png" alt="Comparison of raster vs. vector quality when zoomed in" />
+                            <figcaption>Zoomed-in Comparison: Raster (left) vs. Vector (right)</figcaption>
+                        </figure>
+
+                <!-- Cons Section -->
+                <h3>Cons</h3>
+                    <ul>
+                        <li>
+                            <strong>Complicated for highly detailed images:</strong> SVG doesn't scale well to these intricacies for the compression ratios, resulting in larger file sizes. Therefore, raster formats are better suited for these types of images.
+                        </li>
+                        <li>
+                            <strong>Browser Compatibility:</strong> Most current browsers can render SVG without trouble, but older versions may require fallback measures to fully support this feature.
+                        </li>
+                        <li>
+                            <strong>Performance Issues:</strong> SVGs can lead to performance issues, especially during rendering on low-powered devices when overused or used for complex graphics.
+                        </li>
+                        <li>
+                            <strong>Limited Color Depth:</strong> SVGs are not suitable for images requiring a wide range of colors or gradients, as they are primarily designed for simpler graphics.
+                        </li>
+                    </ul>
+
+                    <div class="comparison-images">
+                        <figure>
+                            <img src="images/pros-and-cons-of-svg/cons-raster-img.jpeg" alt="Raster image zoomed out" />
+                        </figure>
+                        <figure>
+                            <img src="images/pros-and-cons-of-svg/cons-raster-img-zoomed.png" alt="Raster image zoomed in" />
+                            <figcaption>(Raster img) 69KB - more detailed</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/pros-and-cons-of-svg/cons-svg-img.jpeg" alt="SVG image zoomed out" />
+                        </figure>
+                        <figure>
+                            <img src="images/pros-and-cons-of-svg/cons-svg-img-zoomed.png" alt="SVG image zoomed in" />
+                            <figcaption>(SVG img) 1.6MB - less detailed</figcaption>
+                        </figure>
+                    </div>
+            
+            </section>
         </main>
         <footer></footer>
     </body>
