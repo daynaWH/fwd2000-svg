@@ -23,8 +23,44 @@ html {
 /* Typography
 --------------------------------------------- */
 
+h2 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
 /* Elements
 --------------------------------------------- */
+
+.basic-demo-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.basic-demo-btn:hover {
+    background-color: #555;
+}
+
+.basic-demo-desc {
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 80%;
+    display: none;
+}
+
+.basic-demo-desc.open {
+    display: block;
+}
 
 /* Links
 --------------------------------------------- */
@@ -93,21 +129,15 @@ main {
 
 /* *************** Basic Features **************** */
 
-.basic-demo-btn {
-    border: none;
+.basic-features {
     width: 80%;
-    margin: 2rem auto;
-    padding: 1rem;
-    cursor: pointer;
+    text-align: justify;
+    margin: 5rem auto;
 }
 
-.basic-demo-desc.open {
-    display: block;
-}
-
-.basic-demo-desc {
-    display: none;
-    width: 80%;
+.basic-features .basic-demo-btn,
+.basic-features .basic-demo-desc.open {
+    width: 100%;
 }
 
 .basic-features img {
@@ -138,7 +168,6 @@ main {
     width: 80%;
 }
 
-
 /* *************** Interactivity with SVG **************** */
 
 .svg-interactivity h2,
@@ -160,37 +189,8 @@ main {
     width: 80%;
 }
 
-.svg-interactivity button.basic-demo-btn {
-    display: block;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.svg-interactivity button.basic-demo-btn:hover {
-    background-color: #555;
-}
-
-.svg-interactivity .basic-demo-desc {
-    margin: 1rem auto;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    width: 80%;
-    display: none;
-}
-
-.svg-interactivity .basic-demo-desc.open {
-    display: block;
-}
-
-.svg-interactivity pre {
+.svg-interactivity pre,
+.basic-features pre {
     background: #e8e8e8;
     padding: 1rem;
     border-radius: 5px;
@@ -246,7 +246,8 @@ main {
     margin: 0 auto;
 }
 
-.svg-interactivity figcaption {
+.svg-interactivity figcaption,
+.basic-features figcaption {
     font-style: italic;
     margin-top: 0.5rem;
     text-align: center;
@@ -281,7 +282,6 @@ main {
     display: block;
     margin: 2em auto;
 }
-
 
 /* *************** Pros and Cons **************** */
 
