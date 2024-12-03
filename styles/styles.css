@@ -116,6 +116,29 @@ main {
     margin: 0 auto;
 }
 
+/* *************** Advanced SVG Features ***************** */
+
+.svg-advanced {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.svg-advanced h2 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.svg-advanced h3 {
+    margin-left: 15.5rem;
+}
+
+.svg-advanced ul {
+    list-style: disc inside;
+    margin: 1rem auto;
+    width: 80%;
+}
+
+
 /* *************** Interactivity with SVG **************** */
 
 .svg-interactivity h2,
