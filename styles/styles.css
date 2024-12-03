@@ -29,6 +29,21 @@ html {
 /* Links
 --------------------------------------------- */
 
+a,
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(63, 81, 214);
+    text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
@@ -40,8 +55,31 @@ html {
 /* Header 
 --------------------------------------------- */
 
+body {
+    margin: 0;
+}
+
+.side-nav ol {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15rem;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    gap: 2rem;
+    background-color: rgb(180, 180, 180);
+    z-index: 1;
+}
+
 /* Main
 --------------------------------------------- */
+
+main {
+    margin-left: 20rem;
+    padding: 2rem;
+}
 
 /* *************** Common Uses **************** */
 
