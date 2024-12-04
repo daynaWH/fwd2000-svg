@@ -56,9 +56,9 @@ h1{
 .fig-cap{
     display: flex;
     justify-content: space-between; 
-    align-items: center;
-    padding: 5px;
-    gap: 50px;
+    padding: 2px;
+    margin: 0 auto;
+    
 }
 
 
