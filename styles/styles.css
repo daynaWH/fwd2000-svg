@@ -1,6 +1,9 @@
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
-----------------------------------------------------------------
+---------------------------------------------------------------
+
+
+
 # Base
 	- Typography
 	- Elements
@@ -18,7 +21,46 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
+
+h1{
+    color: rgb(108, 4, 108);
+    background-color: rgb(200, 197, 197);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.svg-use{
+    color: rgb(108, 4, 108);
+    background-color: rgb(200, 197, 197);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.image-container img{
+    width: 200px;
+    height: 200px;
+}
+
+.image-container{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.fig-cap{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 5px;
+    gap: 50px;
+}
+
 
 /* Typography
 --------------------------------------------- */
