@@ -21,10 +21,9 @@
 
 html {
     scroll-behavior: smooth;
-    
 }
 
-h1{
+h1 {
     color: rgb(4, 244, 228);
     background-color: rgb(66, 65, 65);
     padding-bottom: 20px;
@@ -32,7 +31,7 @@ h1{
     text-align: center;
 }
 
-.svg-use{
+.svg-use {
     color: rgb(4, 244, 228);
     background-color: rgb(66, 65, 65);
     padding-bottom: 20px;
@@ -40,27 +39,24 @@ h1{
     text-align: center;
 }
 
-.image-container img{
+.image-container img {
     width: 200px;
     height: 200px;
 }
 
-.image-container{
+.image-container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
-    
 }
 
-.fig-cap{
+.fig-cap {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 2px;
     margin: 0 auto;
-    
 }
-
 
 /* Typography
 --------------------------------------------- */
@@ -151,19 +147,23 @@ body {
     z-index: 1;
 }
 
-.side-nav a{
+.side-nav a {
     color: rgb(66, 65, 65);
 }
 
-.side-nav li{
+.side-nav li {
     color: rgb(66, 65, 65);
+}
+
+picture {
+    margin-left: 14rem;
 }
 
 /* Main
 --------------------------------------------- */
 
 main {
-    margin-left: 20rem;
+    margin-left: 15rem;
     padding: 2rem;
 }
 
@@ -450,3 +450,16 @@ main {
 
 /* Footer 
 --------------------------------------------- */
+
+footer {
+    margin-left: 15rem;
+    background-color: rgb(66, 65, 65);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+    padding: 0.5rem;
+}
