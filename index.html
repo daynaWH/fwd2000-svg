@@ -11,14 +11,18 @@
     <body>
         <header>
             <!-- Replace this img with the banner with srcset attribute -->
-            <img
-                style="
-                    height: 20rem;
-                    width: 100%;
-                    background-color: rgb(66, 65, 65);
-                    top: 0;
-                "
-            />
+            <picture>
+                <img
+                    sizes="(max-width: 1260px) calc(100vw - 60px), 1200px"
+                    srcset="
+                        images/banner/banner-small.png   400w,
+                        images/banner/banner-medium.png  800w,
+                        images/banner/banner-large.png  1200w
+                    "
+                    src="images/banner/banner-large.jpg"
+                    alt=""
+                />
+            </picture>
             <nav class="side-nav">
                 <ol>
                     <li><a href="#intro">Introduction</a></li>
@@ -65,25 +69,58 @@
                 </p>
             </section>
 
-           <section id="svg-purpose">
+            <section id="svg-purpose">
                 <h2 class="svg-use">Why use an SVG?</h2>
-                    <ol>
-                        <li>Small File Size</li>
-                        <p>A raster graphics file (PNG, JPEG, etc.) is defined by the number of pixels that it consists of, thus, the higher the number of pixels the heavier it gets in size increasing the time it will take to load a page, however,  this is not the case for an SGV icon that is defined by its colors, shapes, gradients, etc. The longer it takes to load a webpage the less likely a user will stay on that page, recommend it to other users, or return in the future.
-                        </p>
-                        <li>Numerous Editing and Animating Opportunities:</li>
-                        <p>Unlike a pixelated image, a vector image can be edited in a special vector editing program, directly in a text editor, or styled in CSS. SVG’s can also be used for animation purposes using simple animation programs such as, SMIL (Synchronized Multimedia Integration Language) the native SVG animation specification, Web Animations API (Application Programming Interface) a native JavaScript API that allows developers to create a more complex sequential animation without having to load an external script, WebGL, or CSS Animation which is used to avoid overloading services with big libraries for animating icons and loaders and because it can be styled in CSS without needing Javascript or external libraries, the files are much smaller and much faster to load. 
-                        </p>
-                        <li>Integration with HTML, XHTML and CSS</li>
-                        <p>SVG was created and designed to work easily with the main building blocks of websites, HTML, CSS and JavaScript. This makes it more powerful and flexible than other images	. An SVG can be inserted directly into an HTML document like any other content, text, buttons, etc. With CSS, an SVG can be styled using color, width, position or any other properties used to style HTML content. Animating an SVG with CSS is similar to how a developer would use CSS to create a functional button.</p>
-                    </ol>
+                <ol>
+                    <li>Small File Size</li>
+                    <p>
+                        A raster graphics file (PNG, JPEG, etc.) is defined by
+                        the number of pixels that it consists of, thus, the
+                        higher the number of pixels the heavier it gets in size
+                        increasing the time it will take to load a page,
+                        however, this is not the case for an SGV icon that is
+                        defined by its colors, shapes, gradients, etc. The
+                        longer it takes to load a webpage the less likely a user
+                        will stay on that page, recommend it to other users, or
+                        return in the future.
+                    </p>
+                    <li>Numerous Editing and Animating Opportunities:</li>
+                    <p>
+                        Unlike a pixelated image, a vector image can be edited
+                        in a special vector editing program, directly in a text
+                        editor, or styled in CSS. SVG’s can also be used for
+                        animation purposes using simple animation programs such
+                        as, SMIL (Synchronized Multimedia Integration Language)
+                        the native SVG animation specification, Web Animations
+                        API (Application Programming Interface) a native
+                        JavaScript API that allows developers to create a more
+                        complex sequential animation without having to load an
+                        external script, WebGL, or CSS Animation which is used
+                        to avoid overloading services with big libraries for
+                        animating icons and loaders and because it can be styled
+                        in CSS without needing Javascript or external libraries,
+                        the files are much smaller and much faster to load.
+                    </p>
+                    <li>Integration with HTML, XHTML and CSS</li>
+                    <p>
+                        SVG was created and designed to work easily with the
+                        main building blocks of websites, HTML, CSS and
+                        JavaScript. This makes it more powerful and flexible
+                        than other images . An SVG can be inserted directly into
+                        an HTML document like any other content, text, buttons,
+                        etc. With CSS, an SVG can be styled using color, width,
+                        position or any other properties used to style HTML
+                        content. Animating an SVG with CSS is similar to how a
+                        developer would use CSS to create a functional button.
+                    </p>
+                </ol>
 
                 <div class="image-container">
-                    <img src="images/excellogo.webp" alt="Excel Logo"/>
-                    <img src="images/svg-flower.jpg" alt="flowersvg"/>
-                    <img src="images/snowglobesvg.jpg" alt="snowglobe"/>
+                    <img src="images/excellogo.webp" alt="Excel Logo" />
+                    <img src="images/svg-flower.jpg" alt="flowersvg" />
+                    <img src="images/snowglobesvg.jpg" alt="snowglobe" />
                 </div>
-                    
+
                 <div class="fig-cap">
                     <figure>
                         <figcaption>SVG Logo for Excel Spreadsheet</figcaption>
@@ -95,7 +132,6 @@
                         <figcaption>Snowglobe SVG Animation</figcaption>
                     </figure>
                 </div>
-        
             </section>
 
             <!-- Common Use Cases - Dayna -->
@@ -905,6 +941,9 @@
                 </div>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            <p>BCIT - FWD40</p>
+            <p>For educational purposes</p>
+        </footer>
     </body>
 </html>
