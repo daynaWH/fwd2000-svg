@@ -25,16 +25,16 @@ html {
 }
 
 h1{
-    color: rgb(247, 196, 205);
-    background-color: rgb(94, 93, 93);
+    color: rgb(4, 244, 228);
+    background-color: rgb(66, 65, 65);
     padding-bottom: 20px;
     padding-top: 20px;
     text-align: center;
 }
 
 .svg-use{
-    color: rgb(247, 196, 205);
-    background-color: rgb(94, 93, 93);
+    color: rgb(4, 244, 228);
+    background-color: rgb(66, 65, 65);
     padding-bottom: 20px;
     padding-top: 20px;
     text-align: center;
@@ -147,8 +147,16 @@ body {
     margin: 0;
     top: 0;
     gap: 2rem;
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(4, 244, 228);
     z-index: 1;
+}
+
+.side-nav a{
+    color: rgb(66, 65, 65);
+}
+
+.side-nav li{
+    color: rgb(66, 65, 65);
 }
 
 /* Main
