@@ -119,6 +119,20 @@ main {
 
 /* *************** Common Uses **************** */
 
+.use-cases {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.use-cases span {
+    font-weight: bold;
+}
+
+.icon-examples,
+.artwork-examples {
+    text-align: center;
+}
+
 .icon-examples img {
     height: 3rem;
 }
@@ -247,6 +261,7 @@ main {
 }
 
 .svg-interactivity figcaption,
+.use-cases figcaption,
 .basic-features figcaption {
     font-style: italic;
     margin-top: 0.5rem;
