@@ -1,4 +1,21 @@
-// --------- Basic Features Demo Code -----------
+// --------- Navigation Menu Toggle -----------
+
+const navBtn = document.getElementById("nav-btn");
+const navBar = document.getElementById("nav-list");
+const navItem = document.querySelectorAll(".navigation li");
+
+navBtn.addEventListener("click", function () {
+    navBar.classList.remove("hide");
+    navBar.classList.toggle("open");
+});
+
+navItem.forEach((navItem) =>
+    navItem.addEventListener("click", function () {
+        navBar.classList.toggle("hide");
+    })
+);
+
+// --------- Demo Code -----------
 
 const btnDemo = document.querySelectorAll(".basic-demo-btn");
 const demoDesc = document.querySelectorAll(".basic-demo-desc");
