@@ -236,6 +236,7 @@ main {
 
 @media (min-width: 50em) {
     main {
+        margin-top: 0;
         margin-left: 15rem;
     }
 }
