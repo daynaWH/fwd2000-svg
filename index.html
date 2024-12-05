@@ -12,15 +12,22 @@
         <header>
             <!-- Replace this img with the banner with srcset attribute -->
             <picture>
-                <img
-                    sizes="(max-width: 1260px) calc(100vw - 60px), 1200px"
+                <source
                     srcset="
-                        images/banner/banner-small.png   400w,
-                        images/banner/banner-medium.png  800w,
-                        images/banner/banner-large.png  1200w
+                        images/banner/banner-extra-large.png 1600w,
+                        images/banner/banner-medium.png       800w
                     "
-                    src="images/banner/banner-large.jpg"
-                    alt=""
+                    sizes="(max-width: 85em) calc(100vw - 240px), 75em"
+                    media="(max-width: 60em)"
+                />
+                <img
+                    src="images/banner/banner-large.png"
+                    srcset="
+                        images/banner/banner-large.png 1200w
+                        images/banner/banner-small.png  400w,
+                    "
+                    sizes="calc(100vw - 240px)"
+                    alt="A shoal of goldfish"
                 />
             </picture>
             <nav class="side-nav">
