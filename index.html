@@ -43,15 +43,22 @@
         <main>
             <!-- Banner Image -->
             <picture>
-                <img
-                    sizes="(max-width: 1260px) calc(100vw - 60px), 1200px"
+                <source
                     srcset="
-                        images/banner/banner-small.png   400w,
-                        images/banner/banner-medium.png  800w,
-                        images/banner/banner-large.png  1200w
+                        images/banner/banner-extra-large.png 1600w,
+                        images/banner/banner-medium.png       800w
                     "
-                    src="images/banner/banner-large.jpg"
-                    alt=""
+                    sizes="(max-width: 800px) calc(100vw), 800px"
+                    media="(max-width: 600w)"
+                />
+                <img
+                    src="images/banner/banner-large.png"
+                    srcset="
+                        images/banner/banner-large.png 1200w,
+                        images/banner/banner-small.png  400w
+                    "
+                    sizes="(max-width: 1260px) calc(100vw - 240px), 1200px"
+                    alt="Shoal of goldfish"
                 />
             </picture>
 
