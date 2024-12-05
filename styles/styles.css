@@ -1,0 +1,506 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+---------------------------------------------------------------
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main - Styles specific to each topic goes here
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Typography
+--------------------------------------------- */
+
+h1,
+h2 {
+    color: #e8e8e8;
+    background-color: #854c28;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #3c2213;
+    text-shadow: 1px 1px 2px #00000033;
+    margin: 1rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+    margin: 2rem 0;
+    font-family: "Playfair Display", serif;
+}
+
+p,
+a {
+    font-family: "Poppins" sans-serif;
+}
+
+figcaption{
+    font-style: italic;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+/* Elements
+--------------------------------------------- */
+
+.basic-demo-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.basic-demo-btn:hover {
+    background-color: #555;
+}
+
+.basic-demo-desc {
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 80%;
+    display: none;
+}
+
+.basic-demo-desc.open {
+    display: block;
+}
+
+/* Links
+--------------------------------------------- */
+
+a,
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(63, 81, 214);
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+section {
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 2px solid #854c28;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fffaf0;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header 
+--------------------------------------------- */
+
+body {
+    margin: 0;
+    overscroll-behavior: none;
+}
+
+/* Navigation */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(186, 126, 73);
+    z-index: 10;
+}
+
+.navigation button {
+    border: none;
+    background-color: transparent;
+    margin-left: 2rem;
+}
+
+.navigation img {
+    width: 3rem;
+}
+
+.navigation ol {
+    display: none;
+}
+
+.navigation ol.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 2rem auto;
+    gap: 2rem;
+    background-color: rgb(186, 126, 73);
+    z-index: 1;
+}
+
+.navigation a {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navigation li {
+    color: rgb(255, 255, 255);
+}
+
+/* Navigation - Desktop View */
+
+@media (min-width: 50em) {
+    .navigation button {
+        display: none;
+    }
+
+    .navigation ol,
+    .navigation ol.open {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        width: 15rem;
+        height: 100%;
+        margin: 0;
+        top: 0;
+        gap: 2rem;
+        background-color: rgb(186, 126, 73);
+    }
+}
+
+/* Main
+--------------------------------------------- */
+
+main {
+    margin-top: 3rem;
+}
+
+/* Main - Desktop View */
+
+@media (min-width: 50em) {
+    main {
+        margin-top: 0;
+        margin-left: 15rem;
+    }
+}
+
+/* *************** Why use an SVG **************** */
+
+.image-container img {
+    width: 200px;
+    height: 200px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+/* *************** Common Uses **************** */
+
+.use-cases span {
+    font-weight: bold;
+}
+
+.icon-examples,
+.artwork-examples {
+    text-align: center;
+}
+
+.icon-examples img {
+    height: 3rem;
+}
+
+.artwork-examples img {
+    height: 8rem;
+}
+
+/* *************** Basic Features **************** */
+
+.basic-features .basic-demo-btn,
+.basic-features .basic-demo-desc.open {
+    width: 100%;
+}
+
+.basic-features img {
+    height: 10rem;
+    display: block;
+    margin: 0 auto;
+}
+
+/* *************** Advanced SVG Features ***************** */
+
+.svg-advanced {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+}
+
+
+.svg-advanced ul {
+    list-style: disc inside;
+    margin: 1rem auto;
+    width: 100%;
+}
+
+.svg-advanced ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* *************** Interactivity with SVG **************** */
+
+
+.svg-interactivity p {
+    margin: 1rem auto;
+    line-height: 1.5;
+    width: 80%;
+    text-align: justify;
+}
+
+.svg-interactivity ul {
+    list-style: disc inside;
+    margin: 1rem auto;
+    width: 80%;
+}
+
+.svg-interactivity pre,
+.basic-features pre {
+    background: #e8e8e8;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: monospace;
+}
+
+.svg-interactivity .circle-container {
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.svg-interactivity .circle-container svg {
+    margin-bottom: 0.5rem;
+}
+
+.svg-interactivity .example-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    margin: 1rem auto;
+}
+
+.svg-interactivity .example-container svg {
+    width: 7.5rem;
+}
+
+.svg-interactivity .interactivity-hover-demo,
+.svg-interactivity .interactivity-toggle-demo,
+.svg-interactivity .interactivity-hover-toggle-demo {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.svg-interactivity figure {
+    display: inline-block;
+    width: 45%;
+    margin: 0;
+    text-align: center;
+}
+
+.svg-interactivity figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.svg-interactivity .circle-container figcaption {
+    font-style: italic;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* *************** Tools and Libraries *************** */
+
+.tools-libraries ul {
+    list-style: disc inside;
+    margin: 1rem auto;
+    width: 80%;
+    line-height: 1.5;
+}
+
+.tools-libraries img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 2em auto;
+}
+
+/* *************** Pros and Cons **************** */
+
+.svg-pros-and-cons h2,
+.svg-pros-and-cons h3 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* List Styling */
+.svg-pros-and-cons ul {
+    list-style: disc inside;
+    margin: 1rem auto;
+    width: 80%;
+}
+
+.svg-pros-and-cons ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* Paragraph Styling */
+.svg-pros-and-cons p {
+    margin: 1rem auto;
+    width: 80%;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.svg-pros-and-cons figure {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.svg-pros-and-cons figure img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.svg-pros-and-cons figure figcaption {
+    font-style: italic;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Comparison Images Layout */
+.svg-pros-and-cons .comparison-images {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+/* Column Layout */
+.svg-pros-and-cons .comparison-images .comparison-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    max-width: 45%;
+}
+
+/* Images in Columns */
+.svg-pros-and-cons .comparison-images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.svg-pros-and-cons .comparison-images img[alt="SVG image zoomed out"],
+.svg-pros-and-cons .comparison-images img[alt="SVG image zoomed in"] {
+    width: 18.75rem;
+}
+
+.svg-pros-and-cons .comparison-images img[alt="Raster image zoomed out"],
+.svg-pros-and-cons .comparison-images img[alt="Raster image zoomed in"] {
+    width: 18.75rem;
+}
+
+/* Figure Styling */
+.svg-pros-and-cons .comparison-images figure {
+    text-align: center;
+    margin: 0;
+}
+
+/* Figcaption Styling */
+.svg-pros-and-cons .comparison-images figcaption {
+    font-style: italic;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+/* Footer 
+--------------------------------------------- */
+
+footer {
+    position: sticky;
+    width: 100%;
+    background-color: rgb(66, 65, 65);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1rem;
+    z-index: 10;
+}
+
+footer p {
+    margin: 0;
+    padding: 0.5rem;
+}

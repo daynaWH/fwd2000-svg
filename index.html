@@ -4,12 +4,154 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles/normalize-fwd.css" />
         <link rel="stylesheet" href="styles/styles.css" />
         <script src="scripts/script.js" defer></script>
     </head>
     <body>
-        <header></header>
+        <header class="header">
+            <nav class="navigation">
+                <button id="nav-btn">
+                    <img src="images/navicon.svg" alt="Navigation menu icon" />
+                </button>
+                <ol id="nav-list">
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#svg-purpose">Why Use SVG?</a></li>
+                    <li><a href="#use-cases">Common Use Cases</a></li>
+                    <li><a href="#basic-features">Basic Features of SVG</a></li>
+                    <li>
+                        <a href="#advanced-features"
+                            >Advanced Features of SVG</a
+                        >
+                    </li>
+                    <li><a href="#interactivity">Interactivity with SVG</a></li>
+                    <li><a href="#tools">Tools and Libraries</a></li>
+                    <li><a href="#pros-and-cons">Pros and Cons of SVG</a></li>
+                    <li><a href="#references">References</a></li>
+                </ol>
+            </nav>
+        </header>
+
         <main>
+            <!-- Banner Image -->
+            <picture>
+                <source
+                    srcset="
+                        images/banner/banner-extra-large.png 1600w,
+                        images/banner/banner-medium.png       800w
+                    "
+                    sizes="(max-width: 800px) calc(100vw), 800px"
+                    media="(max-width: 800w)"
+                />
+                <img
+                    src="images/banner/banner-large.png"
+                    srcset="
+                        images/banner/banner-large.png 1200w,
+                        images/banner/banner-small.png  400w
+                    "
+                    sizes="(max-width: 1260px) calc(100vw), 2000px"
+                    alt="Shoal of goldfish"
+                />
+            </picture>
+
+            <!-- What is an SVG? - Stephanie -->
+            <section id="intro">
+                <h1>SVG: What is an SVG and when was it created?</h1>
+                <p>
+                    Anyone using the web may have often come across something
+                    known as an SVG. So what exactly is an SVG? Unlike a PNG or
+                    JPEG image that uses pixels, an SVG, also known as Scalable
+                    Vector Graphics, is a file format and technology used for
+                    creating and displaying vector-based graphics on the web by
+                    the use of mathematical formulas that define shapes, lines,
+                    colors and text. This type of technology allows for
+                    scalability which means an SVG can be resized without losing
+                    its quality making it ideal for responsive design.<br />
+                    The World Wide Web Consortium (W3C) SVG Working Group
+                    developed the SVG in 1998, chaired by Chris Lilley, along
+                    with 6 competing vector graphicssubmissions that year,
+                    including graphics from Adobe, Hewlett-Packard, and WebCGM.
+                    Its initial release was the SVG 1.0 as a recommendation on
+                    September 4,2001, then in 2003 the W3C launched SVG 1.1 and
+                    SVG Mobile but because of the lack of support, early
+                    adoption was limited. It was not until 2011 that allmajor
+                    desktop browsers began to support SVG and that year the W3C
+                    published SVG 1.1 Second Edition. Today, SVGs are used by
+                    web developers and webdesigners on a global scale.
+                </p>
+            </section>
+
+            <section id="svg-purpose">
+                <h2 class="svg-use">Why use an SVG?</h2>
+                <ol>
+                    <li>Small File Size</li>
+                    <p>
+                        A raster graphics file (PNG, JPEG, etc.) is defined by
+                        the number of pixels that it consists of, thus, the
+                        higher the number of pixels the heavier it gets in size
+                        increasing the time it will take to load a page,
+                        however, this is not the case for an SGV icon that is
+                        defined by its colors, shapes, gradients, etc. The
+                        longer it takes to load a webpage the less likely a user
+                        will stay on that page, recommend it to other users, or
+                        return in the future.
+                    </p>
+                    <li>Numerous Editing and Animating Opportunities:</li>
+                    <p>
+                        Unlike a pixelated image, a vector image can be edited
+                        in a special vector editing program, directly in a text
+                        editor, or styled in CSS. SVG’s can also be used for
+                        animation purposes using simple animation programs such
+                        as, SMIL (Synchronized Multimedia Integration Language)
+                        the native SVG animation specification, Web Animations
+                        API (Application Programming Interface) a native
+                        JavaScript API that allows developers to create a more
+                        complex sequential animation without having to load an
+                        external script, WebGL, or CSS Animation which is used
+                        to avoid overloading services with big libraries for
+                        animating icons and loaders and because it can be styled
+                        in CSS without needing Javascript or external libraries,
+                        the files are much smaller and much faster to load.
+                    </p>
+                    <li>Integration with HTML, XHTML and CSS</li>
+                    <p>
+                        SVG was created and designed to work easily with the
+                        main building blocks of websites, HTML, CSS and
+                        JavaScript. This makes it more powerful and flexible
+                        than other images . An SVG can be inserted directly into
+                        an HTML document like any other content, text, buttons,
+                        etc. With CSS, an SVG can be styled using color, width,
+                        position or any other properties used to style HTML
+                        content. Animating an SVG with CSS is similar to how a
+                        developer would use CSS to create a functional button.
+                    </p>
+                </ol>
+
+
+                <div class="image-container">
+                    <figure>
+                        <img src="images/excellogo.webp" alt="Excel Logo" />
+                        <figcaption>SVG Logo for Excel Spreadsheet</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/svg-flower.jpg" alt="flowersvg" />
+                        <figcaption>Flower Image SVG</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/snowglobesvg.jpg" alt="snowglobe" />
+                        <figcaption>Snowglobe SVG Animation</figcaption>
+                    </figure>
+                </div>
+            </section>
+
             <!-- Common Use Cases - Dayna -->
             <section class="use-cases" id="use-cases">
                 <h2>Common Use Cases</h2>
@@ -20,119 +162,864 @@
                     the website. Please find below some examples of the most
                     common use cases of SVG images.
                 </p>
-                <ol>
-                    <li>Icons</li>
-                    <p>
-                        <span>Icons</span> are one of the most used forms of SVG
-                        files. Examples:
-                    </p>
-                    <ul>
-                        <li>Buttons</li>
-                        <li>Navigation Menu</li>
-                        <li>Favicons</li>
-                    </ul>
 
-                    <p>
-                        The icons can be created as needed through programs such
-                        as Illustrator or can be accessed via online resources.
-                        For example, websites such as
-                        <a href="https://iconmonstr.com/">iconmonstr</a> and
-                        <a href="https://www.svgrepo.com/">SVG Repo</a> are
-                        excellent online resources for various SVG vectors and
-                        icons.
-                    </p>
-                    <div class="icon-examples">
-                        <img
-                            src="images/common-use/logo-amazon.svg"
-                            alt="Amazon logo"
-                        />
-                        <img
-                            src="images/common-use/logo-apple.svg"
-                            alt="Apple logo"
-                        />
-                        <img
-                            src="images/common-use/logo-mcdonalds.svg"
-                            alt="McDonald's logo"
-                        />
-                        <img
-                            src="images/common-use/logo-google.svg"
-                            alt="Google logo"
-                        />
-                        <img
-                            src="images/common-use/logo-whatsapp.svg"
-                            alt="Whatsapp logo"
-                        />
+                <h3>Icons</h3>
+                <p>
+                    <span>Icons</span> are one of the most used forms of SVG
+                    files. Examples:
+                </p>
+                <ul>
+                    <li>Buttons</li>
+                    <li>Navigation Menu</li>
+                    <li>Favicons</li>
+                </ul>
+
+                <p>
+                    The icons can be created as needed through programs such as
+                    Illustrator or can be accessed via online resources. For
+                    example, websites such as
+                    <a href="https://iconmonstr.com/">iconmonstr</a> and
+                    <a href="https://www.svgrepo.com/">SVG Repo</a> are
+                    excellent online resources for various SVG vectors and
+                    icons.
+                </p>
+
+                <div class="icon-examples">
+                    <img
+                        src="images/common-use/icon-add.svg"
+                        alt="Add favorites button icon"
+                    />
+                    <img
+                        src="images/common-use/icon-btn-up.svg"
+                        alt="Arrow up button icon"
+                    />
+                    <img
+                        src="images/common-use/icon-check.svg"
+                        alt="Check icon"
+                    />
+                    <img
+                        src="images/common-use/icon-close.svg"
+                        alt="Close button icon"
+                    />
+                    <img
+                        src="images/common-use/icon-hamburger.svg"
+                        alt="Hamburger icon"
+                    />
+                    <figcaption>Examples of commonly used icons</figcaption>
+                </div>
+
+                <h3>Logos</h3>
+                <p>
+                    <span>Logos</span> are also a largely used examples of SVG
+                    images. Logos in SVG vectors allow for a dynamic behavior
+                    and interactivity to the website. Examples of the popular
+                    commercial logos are as follows:
+                </p>
+                <div class="icon-examples">
+                    <img
+                        src="images/common-use/logo-amazon.svg"
+                        alt="Amazon logo"
+                    />
+                    <img
+                        src="images/common-use/logo-apple.svg"
+                        alt="Apple logo"
+                    />
+                    <img
+                        src="images/common-use/logo-mcdonalds.svg"
+                        alt="McDonald's logo"
+                    />
+                    <img
+                        src="images/common-use/logo-google.svg"
+                        alt="Google logo"
+                    />
+                    <img
+                        src="images/common-use/logo-whatsapp.svg"
+                        alt="Whatsapp logo"
+                    />
+                    <figcaption>Examples of brand logos</figcaption>
+                </div>
+
+                <h3>Infographics</h3>
+                <p>
+                    <span>Infographics</span> another great example of using
+                    SVG. Besides the interactivity, SVG as charts and graphs
+                    allows us to precisely control over the layout of the data.
+                </p>
+                <div class="artwork-examples">
+                    <img
+                        src="images/common-use/compare-infographic.svg"
+                        alt="Compare infographic template"
+                    />
+                    <img
+                        src="images/common-use/option-infographic.svg"
+                        alt="Option infographic template"
+                    />
+                    <figcaption>Examples of infographics</figcaption>
+                </div>
+
+                <h3>Illustrations and Artwork</h3>
+                <p>
+                    Usually SVGs are used for simpler images like icons rather
+                    than those with more details, in which case png or webp are
+                    more commonly used. However, SVGs are also used for
+                    <span>illustrations</span> and more complex artwork due to
+                    its vector-based characteristic. They provide flexibility
+                    without losing its resolution or basically its quality.
+                </p>
+                <div class="artwork-examples">
+                    <img
+                        src="images/common-use/soccer-poster.svg"
+                        alt="Soccer poster"
+                    />
+                    <img
+                        src="images/common-use/summer-sale-banner.svg"
+                        alt="Summer sale banner"
+                    />
+                    <figcaption>
+                        Examples of illustrations created with SVG
+                    </figcaption>
+                </div>
+            </section>
+
+            <!-- Basic Features - Dayna -->
+            <section class="basic-features" id="basic-features">
+                <h2>Basic SVG Features</h2>
+                <p>
+                    This section introduces some of the basic features that can
+                    be applied to SVG when embedded in HTML.
+                </p>
+
+                <h3>Basic Shapes</h3>
+                <ul>
+                    <li>
+                        <code
+                            >rect, circle, ellipse, line, polyline,
+                            polygon</code
+                        >
+                    </li>
+                </ul>
+                <p>
+                    With SVG we can create basic shapes, and each has their own
+                    attributes to define. For example, their dimensions or
+                    radius if it's a circle.
+                </p>
+                <p>
+                    The <code>&lt;path&gt;</code> element is used to create more
+                    complex shapes using lines and curves. This element is often
+                    found in SVG files obtained from online sources. The
+                    <code>&lt;d&gt;</code> attribute is used to define the path.
+                </p>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <pre>
+                        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;blue&quot; /&gt;
+                            &lt;circle cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;50&quot; fill=&quot;yellow&quot; /&gt;
+                        &lt;/svg&gt;
+                        </pre
+                    >
+                    <img
+                        src="images/basic-features/basic-shape_1.svg"
+                        alt="Yellow circle inside a blue rectangle"
+                    />
+                    <figcaption>
+                        A yellow circle inside a blue rectangle created with
+                        <code>&lt;circle&gt;</code> and
+                        <code>&lt;rect&gt;</code> elements
+                    </figcaption>
+
+                    <!-- Code from https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path -->
+                    <pre>
+                        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M 10,30
+                                    A 20,20 0,0,1 50,30
+                                    A 20,20 0,0,1 90,30
+                                    Q 90,60 50,90
+                                    Q 10,60 10,30 z&quot; /&gt;
+                        &lt;/svg&gt;
+                        </pre
+                    >
+                    <img
+                        src="images/basic-features/basic-shape_2.png"
+                        alt="A black heart"
+                    />
+                    <figcaption>
+                        A black heart created with the
+                        <code>&lt;path&gt;</code> element
+                    </figcaption>
+                </div>
+
+                <h3>Fill</h3>
+                <p>
+                    <code>&lt;fill&gt;</code> sets the color of the inside of
+                    the shapes. Within this element, we can use more specific
+                    attributes:
+                </p>
+                <ul>
+                    <li><code>fill-opacity</code>: 0 to 1 | 0 to 100%</li>
+                    <li>
+                        <code>fill-rule</code>: "non-zero" | "evenodd"
+                        <ul>
+                            <li>
+                                <code>&lt;fill-rule&gt;</code>
+                                sets the color of the part where the shapes
+                                overlap.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <!-- points value from https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule -->
+                    <pre>
+                    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                        &lt;polygon fill=&quot;green&quot; fill-opacity=&quot;0.5&quot; fill-rule=&quot;evenodd&quot;
+                                points=&quot;50,0 21,90 98,35 2,35 79,90&quot; /&gt;
+                    &lt;/svg&gt;
+                    </pre>
+                    <img
+                        src="images/basic-features/fill-rule.svg"
+                        alt="Green star that is transparent in the middle"
+                    />
+                    <figcaption>
+                        A star with <code>&lt;fill-rule&gt;</code> set to
+                        "evenodd"
+                    </figcaption>
+                </div>
+
+                <h3>Stroke</h3>
+                <p>
+                    While fill affects the color of the inside,
+                    <code>&lt;stroke&gt;</code> sets the color of the border of
+                    the shapes. Stroke also has multiple attributes such as
+                    stroke-width, opacity, linecap and linejoin.
+                </p>
+                <ul>
+                    <li><code>stroke-width</code></li>
+                    <li><code>stroke-opacity</code></li>
+                    <li>
+                        <code>stroke-linecap</code>: "butt" | "round" | "square"
+                        <ul>
+                            <li>
+                                <code>&lt;Linecap&gt;</code> defines how the end
+                                of the stroke is, for example, rounded or
+                                angled.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <code>stroke-linejoin</code>: "miter" | "bevel" |
+                        "round"
+                        <ul>
+                            <li>
+                                The <code>&lt;line-join&gt;</code> property sets
+                                how the meeting point of the strokes look.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <img
+                        src="images/basic-features/stroke-linecap.svg"
+                        alt="Three lines with butt, round and square stroke-linecap"
+                    />
+                    <img
+                        src="images/basic-features/stroke-linejoin.svg"
+                        alt="Three triangles with miter, bevel and round stroke-linejoin"
+                    />
+                </div>
+
+                <h3>Gradient</h3>
+                <ul>
+                    <li><code>linearGradient</code></li>
+                    <li><code>radialGradient</code></li>
+                </ul>
+                <p>
+                    Two types of gradient are used to create color gradations in
+                    SVG; linear or radial. They each use different attributes.
+                    For example, linearGradient uses x1, x2, y1, y2 while
+                    radialGradient uses cx, cy, fx, fy, and r and both include
+                    offset and stop-color. The attributes are defined within the
+                    <code>&lt;linearGradient&gt;</code> tag element, which is
+                    nested within the <code>&lt;defs&gt;</code> element.
+                </p>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <pre>
+                        &lt;svg viewBox=&quot;-20 30 300 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;defs&gt;
+                                &lt;linearGradient id=&quot;linear-grad&quot; x1=&quot;0&quot; x2=&quot;50%&quot; y1=&quot;50%&quot;y2=&quot;0&quot;&gt;
+                                    &lt;stop offset=&quot;0%&quot; stop-color=&quot;blue&quot; /&gt;
+                                    &lt;stop offset=&quot;100%&quot; stop-color=&quot;green&quot; /&gt;
+                                &lt;/linearGradient&gt;
+    
+                                &lt;radialGradient id=&quot;radial-grad&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;50%&quot;&gt;
+                                    &lt;stop offset=&quot;0%&quot; stop-color=&quot;blue&quot; /&gt;
+                                    &lt;stop offset=&quot;100%&quot; stop-color=&quot;green&quot; /&gt;
+                                &lt;/radialGradient&gt;
+                            &lt;/defs&gt;
+                            
+                            &lt;circle cx=&quot;0&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;url(#linear-grad)&quot; /&gt;
+                            &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;url(#radial-grad)&quot; /&gt;
+                        &lt;/svg&gt;
+                        </pre
+                    >
+                    <img
+                        src="images/basic-features/gradient.png"
+                        alt="Two circles with linear and radial gradients, respectively"
+                    />
+                    <figcaption>
+                        Circles with linear and radial gradients, respectively
+                    </figcaption>
+                </div>
+
+                <h3>Transform</h3>
+                <p>
+                    Another basic feature of SVG is
+                    <code>&lt;transform&gt;</code>, which is similar to the
+                    transform property in CSS. It applies transformation to
+                    elements nested in the svg element, and multiple
+                    transformations can be added at the same time. Some examples
+                    of transform are listed below.
+                </p>
+                <ul>
+                    <li><code>translate</code> (x y)</li>
+                    <li><code>rotate</code> (degree)</li>
+                    <li><code>scale</code> (x y)</li>
+                    <li>
+                        <code>skewX</code> (degree) <code>skewY</code> (degree)
+                    </li>
+                </ul>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <pre>
+                        &lt;svg height=&quot;300&quot; width=&quot;500&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;rect height=&quot;100&quot; width=&quot;200&quot; y=&quot;70&quot; /&gt;
+                            &lt;rect height=&quot;100&quot; width=&quot;200&quot; transform=&quot;translate(400 10) scale(1.2 0.8) rotate(90) skewX(30)&quot; /&gt;
+                        &lt;/svg&gt;
+                        </pre
+                    >
+                    <img
+                        src="images/basic-features/transform.svg"
+                        alt="One black rectangle and another with transform properties"
+                    />
+                    <figcaption>
+                        Default rectangle and Rectangle with
+                        <code>&lt;transform&gt;</code> property applied
+                    </figcaption>
+                </div>
+            </section>
+
+            <!-- Advanced svg features - Emerson -->
+            <section class="svg-advanced" id="advanced-features">
+                <h2>Advanced SVG Features</h2>
+                <h3>SVG Filters</h3>
+                <ul>
+                    <li>
+                        SVG filters are used to add special effects to SVG
+                        graphics.
+                    </li>
+                    <li>
+                        All SVG filters are defined within a &lt;defs&gt;
+                        element. The &lt;defs&gt; element is short for
+                        "definitions", and contains definition of special
+                        elements (such as filters).
+                    </li>
+                    <li>
+                        The &lt;filter&gt; element is used to define an SVG
+                        filter. The &lt;filter&gt; element has a required id
+                        attribute which identifies the filter.
+                    </li>
+                </ul>
+                <h3>SVG Animation</h3>
+                <ul>
+                    <li>SVG elements can be animated.</li>
+                    <li>
+                        Four animation elements which sets or animates SVG
+                        graphics:
+                        <ul>
+                            <li>&lt;set&gt;</li>
+                            <li>&lt;animate&gt;</li>
+                            <li>&lt;animateTransform&gt;</li>
+                            <li>&lt;animateMotion&gt;</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>SVG Text</h3>
+                <ul>
+                    <li>
+                        Using text directly inside our SVG has lots of benefits:
+                        it can be textured, masked—and is fully accessible.
+                    </li>
+                    <li>
+                        Inside our SVG graphic we can add a &lt;text&gt; element
+                    </li>
+                </ul>
+                <h3>Patterns</h3>
+                <ul>
+                    <li>
+                        Patterns can be defined in SVG using the &lt;pattern&gt;
+                        element. Patterns can be applied to anything that
+                        accepts a fill.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Interactivity with SVG - Ricky-->
+            <section class="svg-interactivity" id="interactivity">
+                <h2>Interactivity with SVG</h2>
+                <p>
+                    SVG (Scalable Vector Graphics) can be interactive, meaning
+                    it can respond to user input. Here are some ways to make SVG
+                    interactive:
+                </p>
+                <ul>
+                    <li>
+                        <strong>CSS:</strong> Excellent for hover effects,
+                        transitions, and animations triggered by pseudo-classes
+                        or classes.
+                    </li>
+                    <li>
+                        <strong>JavaScript:</strong> Adds dynamic behavior like
+                        starting animations on clicks, toggling classes, or
+                        handling custom user interactions.
+                    </li>
+                    <li>
+                        <strong>Click-triggered Animations:</strong> Set
+                        animations to trigger only on user clicks, allowing
+                        actions like scaling, morphing, or self-drawing when a
+                        clickable element is activated.
+                    </li>
+                </ul>
+
+                <h3>HTML Format for an SVG</h3>
+                <p>
+                    Here is an example of how an SVG is structured in HTML. In
+                    this case, a simple blue circle is defined:
+                </p>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <pre>
+                        &lt;!-- SVG Element of a blue circle --&gt;
+                        &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 505 505"&gt;
+                            &lt;circle cx="252.5" cy="252.5" r="252.5" fill="#001bdb"/&gt;
+                        &lt;/svg&gt;
+                    </pre>
+                    <div class="circle-container">
+                        <svg
+                            class="small-circle"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 505 505"
+                        >
+                            <circle
+                                cx="252.5"
+                                cy="252.5"
+                                r="250"
+                                fill="#001bdb"
+                            ></circle>
+                        </svg>
+                        <figcaption>A simple blue circle SVG.</figcaption>
                     </div>
-                    <li>Logos</li>
-                    <p>
-                        <span>Logos</span> are also a largely used examples of
-                        SVG images. Logos in SVG vectors allow for a dynamic
-                        behavior and interactivity to the website. Examples of
-                        the popular commercial logos are as follows:
-                    </p>
-                    <div class="icon-examples">
-                        <img
-                            src="images/common-use/icon-add.svg"
-                            alt="Add favorites button icon"
-                        />
-                        <img
-                            src="images/common-use/icon-btn-up.svg"
-                            alt="Arrow up button icon"
-                        />
-                        <img
-                            src="images/common-use/icon-check.svg"
-                            alt="Check icon"
-                        />
-                        <img
-                            src="images/common-use/icon-close.svg"
-                            alt="Close button icon"
-                        />
-                        <img
-                            src="images/common-use/icon-hamburger.svg"
-                            alt="Hamburger icon"
-                        />
+                </div>
+
+                <h3>
+                    Complex Shapes with the <code>&lt;path&gt;</code> Element
+                </h3>
+                <p>
+                    Here's an example of a heart shape created with the
+                    <code>&lt;path&gt;</code> element:
+                </p>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <pre>
+                        &lt;svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"&gt;
+                        &lt;path d="M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 Z" fill="red"/&gt;
+                        &lt;/svg&gt;
+                    </pre>
+                    <div class="example-container">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="100"
+                            height="100"
+                        >
+                            <path
+                                d="M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 Z"
+                                fill="red"
+                            ></path>
+                        </svg>
                     </div>
-                    <li>Infographics</li>
-                    <p>
-                        <span>Infographics</span> another great example of using
-                        SVG. Besides the interactivity, SVG as charts and graphs
-                        allows us to precisely control over the layout of the
-                        data.
-                    </p>
-                    <div class="artwork-examples">
-                        <img
-                            src="images/common-use/compare-infographic.svg"
-                            alt="Compare infographic template"
-                        />
-                        <img
-                            src="images/common-use/option-infographic.svg"
-                            alt="Option infographic template"
-                        />
+                    <figcaption>
+                        A red heart created using the
+                        <code>&lt;path&gt;</code> element.
+                    </figcaption>
+                </div>
+
+                <h3>Using CSS for SVG Interactivity</h3>
+                <p>
+                    Below is a demonstration of how you can use CSS to add
+                    interactivity to SVG elements:
+                </p>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <pre>
+                        .hoverCircle {
+                            transition: fill 0.3s ease;
+                        }
+                        .hoverCircle:hover {
+                            fill: #00ff00;
+                        }
+                    </pre>
+                    <div>
+                        <h4>Output</h4>
+                        <figure>
+                            <img
+                                src="images/interactivity-with-svg/css-output-b4-hover.png"
+                                alt="Before hover"
+                            />
+                            <figcaption>Before hover state.</figcaption>
+                        </figure>
+                        <figure>
+                            <img
+                                src="images/interactivity-with-svg/css-output-after-hover.png"
+                                alt="After hover"
+                            />
+                            <figcaption>After hover state.</figcaption>
+                        </figure>
                     </div>
-                    <li>Illustrations and Artwork</li>
-                    <p>
-                        Usually SVGs are used for simpler images like icons
-                        rather than those with more details, in which case png
-                        or webp are more commonly used. However, SVGs are also
-                        used for
-                        <span>illustrations</span> and more complex artwork due
-                        to its vector-based characteristic. They provide
-                        flexibility without losing its resolution or basically
-                        its quality.
-                    </p>
-                    <div class="artwork-examples">
-                        <img
-                            src="images/common-use/soccer-poster.svg"
-                            alt="Soccer poster"
-                        />
-                        <img
-                            src="images/common-use/summer-sale-banner.svg"
-                            alt="Summer sale banner"
-                        />
+                </div>
+
+                <h3>Using JavaScript for SVG Interactivity</h3>
+                <p>
+                    Below is a demonstration of how you can use JavaScript to
+                    add interactivity to SVG elements:
+                </p>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <pre>
+                        const interactiveCircle = document.querySelector("#interactiveCircle");
+                        interactiveCircle.addEventListener("click", () => {
+                            const currentColor = interactiveCircle.getAttribute("fill");
+                            interactiveCircle.setAttribute("fill", currentColor === "#001bdb" ? "#db0000" : "#001bdb");
+                        });
+                    </pre>
+                    <div>
+                        <h4>Output</h4>
+                        <figure>
+                            <img
+                                src="images/interactivity-with-svg/js-output-b4-toggle.png"
+                                alt="Before toggle"
+                            />
+                            <figcaption>Before toggle state.</figcaption>
+                        </figure>
+                        <figure>
+                            <img
+                                src="images/interactivity-with-svg/js-output-after-toggle.png"
+                                alt="After toggle"
+                            />
+                            <figcaption>After toggle state.</figcaption>
+                        </figure>
                     </div>
-                </ol>
+                </div>
+
+                <h3>Using CSS and JavaScript Together for SVG Interactivity</h3>
+                <p>
+                    Below is a demonstration of how you can use CSS and
+                    JavaScript together to add interactivity to SVG elements:
+                </p>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <h4>CSS Code:</h4>
+                    <pre>
+                        .hoverCircle {
+                            fill: #001bdb;
+                            transition: transform 0.3s ease, fill 0.3s ease;
+                        }
+                        .hoverCircle:hover {
+                            fill: #00dbdb;
+                        }
+                    </pre>
+                    <h4>JavaScript Code:</h4>
+                    <pre>
+                        const interactiveCircle = document.querySelector("#interactiveCircle");
+                        interactiveCircle.addEventListener("click", () => {
+                            const isScaled = interactiveCircle.getAttribute("transform");
+                            if (isScaled) {
+                                interactiveCircle.removeAttribute("transform");
+                            } else {
+                                interactiveCircle.setAttribute("transform", "scale(1.2)");
+                            }
+                        });
+                    </pre>
+                    <div>
+                        <h4>Output</h4>
+                        <figure>
+                            <img
+                                src="images/interactivity-with-svg/css-js-output-b4-hover.png"
+                                alt="Before hover"
+                            />
+                            <figcaption>Before hover state.</figcaption>
+                        </figure>
+                        <figure>
+                            <img
+                                src="images/interactivity-with-svg/css-js-output-after-hover.png"
+                                alt="After hover"
+                            />
+                            <figcaption>After hover state.</figcaption>
+                        </figure>
+                        <figure>
+                            <img
+                                src="images/interactivity-with-svg/css-js-output-toggled.png"
+                                alt="When toggled"
+                            />
+                            <figcaption>When toggled state.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tools and Libraries - Emerson -->
+            <section class="tools-libraries" id="tools">
+                <h2>Tools and Libraries</h2>
+                <h3>Tools</h3>
+                <ul>
+                    <li><a href="https://inkscape.org/">Inkscape</a></li>
+                    <li>
+                        <a
+                            href="https://www.adobe.com/products/illustrator.html"
+                            >Adobe Illustrator</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://xmlgraphics.apache.org/batik/"
+                            >Apache Batik</a
+                        >
+                    </li>
+                </ul>
+                <h3>Libraries</h3>
+                <ul>
+                    <li><a href="http://snapsvg.io">Snap.svg</a></li>
+                    <li>
+                        <a href="https://docs.google.com/drawings"
+                            >Google Docs</a
+                        >
+                    </li>
+                    <li><a href="https://www.svgrepo.com">SVG Repo</a></li>
+                </ul>
+                <img
+                    src="images/tools-and-libraries/inkscape.png"
+                    alt="inkscape photo"
+                />
+                <img
+                    src="images/tools-and-libraries/snap-svg.png"
+                    alt="snap.svg photo"
+                />
+            </section>
+
+            <!-- Pros and Cons with SVG - Ricky -->
+            <section class="svg-pros-and-cons" id="pros-and-cons">
+                <h2>Pros and Cons of SVG</h2>
+
+                <!-- Pros Section -->
+                <h3>Pros</h3>
+                <ul>
+                    <li>
+                        <strong>Scalability:</strong> Unlike raster images that
+                        generally are constrained by a definite monitor
+                        resolution, SVG images qualify in being
+                        resolution-independent and cater to responsive web
+                        design.
+                    </li>
+                    <li>
+                        <strong>Small File Size:</strong> SVG files are ideal
+                        due to their smaller size relative to raster graphics
+                        (JPEG or PNG). This reduces states of loading time.
+                    </li>
+                    <li>
+                        <strong>Print Quality:</strong> SVG's quality remains
+                        intact while printing unlike raster images that can
+                        sometimes become pixelated.
+                    </li>
+                    <li>
+                        <strong>Accessibility:</strong> SVG files support
+                        multimedia elements such as metadata which can be
+                        beneficial for accessibility and SEO purposes.
+                    </li>
+                    <li>
+                        <strong>Interactivity:</strong> Hover effects and click
+                        events can be embedded in SVG to create interactive
+                        graphics and charts.
+                    </li>
+                    <li>
+                        <strong>Manipulability:</strong> SVGs are XML-based and
+                        they can be manipulated using CSS and JavaScript. This
+                        provides room for dynamic effects, animations, and easy
+                        styling.
+                    </li>
+                </ul>
+                <p>
+                    Below is an example comparing raster and vector image
+                    quality when zoomed in. Notice how the vector (SVG) retains
+                    its sharpness while the raster image becomes pixelated.
+                </p>
+                <figure>
+                    <img
+                        src="images/pros-and-cons-of-svg/pros-raster-vs-vector.png"
+                        alt="Comparison of raster vs. vector quality when zoomed in"
+                    />
+                    <figcaption>
+                        Zoomed-in Comparison: Raster (left) vs. Vector (right)
+                    </figcaption>
+                </figure>
+
+                <!-- Cons Section -->
+                <h3>Cons</h3>
+                <ul>
+                    <li>
+                        <strong>Complicated for highly detailed images:</strong>
+                        SVG doesn't scale well to these intricacies for the
+                        compression ratios, resulting in larger file sizes.
+                        Therefore, raster formats are better suited for these
+                        types of images.
+                    </li>
+                    <li>
+                        <strong>Browser Compatibility:</strong> Most current
+                        browsers can render SVG without trouble, but older
+                        versions may require fallback measures to fully support
+                        this feature.
+                    </li>
+                    <li>
+                        <strong>Performance Issues:</strong> SVGs can lead to
+                        performance issues, especially during rendering on
+                        low-powered devices when overused or used for complex
+                        graphics.
+                    </li>
+                    <li>
+                        <strong>Limited Color Depth:</strong> SVGs are not
+                        suitable for images requiring a wide range of colors or
+                        gradients, as they are primarily designed for simpler
+                        graphics.
+                    </li>
+                </ul>
+
+                <div class="comparison-images">
+                    <!-- Raster Column -->
+                    <div class="comparison-column">
+                        <figure>
+                            <img
+                                src="images/pros-and-cons-of-svg/cons-raster-img.jpeg"
+                                alt="Raster image zoomed out"
+                            />
+                        </figure>
+                        <figure>
+                            <img
+                                src="images/pros-and-cons-of-svg/cons-raster-img-zoomed.png"
+                                alt="Raster image zoomed in"
+                            />
+                            <figcaption>
+                                Raster image (675kb more detailed).
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- SVG Column -->
+                    <div class="comparison-column">
+                        <figure>
+                            <img
+                                src="images/pros-and-cons-of-svg/cons-svg-img.jpeg"
+                                alt="SVG image zoomed out"
+                            />
+                        </figure>
+                        <figure>
+                            <img
+                                src="images/pros-and-cons-of-svg/cons-svg-img-zoomed.png"
+                                alt="SVG image zoomed in"
+                            />
+                            <figcaption>
+                                SVG image (1mb and less detailed)
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="references" id="references">
+                <h2>References</h2>
+                <ul>
+                    <li>
+                        SVG files
+                        <a
+                            href="https://www.adobe.com/creativecloud/file-types/image/vector/svg-file.html#:~:text=SVG%20files%20are%20great%20for,browsers%20can%20support%20SVG%20images"
+                            >(https://www.adobe.com/)</a
+                        >
+                    </li>
+                    <li>
+                        What is an SVG?
+                        <a
+                            href="https://www.svgator.com/blog/what-is-an-svg/#what-is-an-svg-used-for"
+                            >(https://www.svgator.com/)
+                        </a>
+                    </li>
+                    <li>
+                        MDN Web Docs - &lt;SVG&gt;
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg"
+                            >(https://developer.mozilla.org)</a
+                        >
+                    </li>
+                    <li>
+                        W3Schools - SVG Tutorial
+                        <a
+                            href="https://www.w3schools.com/graphics/svg_intro.asp"
+                            >(https://www.w3schools.com)</a
+                        >
+                    </li>
+                    <li>
+                        iconmonstr
+                        <a href="https://iconmonstr.com/"
+                            >(https://iconmonstr.com/)</a
+                        >
+                    </li>
+                    <li>
+                        SVG Repo
+                        <a href="https://www.svgrepo.com/"
+                            >(https://www.svgrepo.com)</a
+                        >
+                    </li>
+                    <li>
+                        Compare infographic template
+                        <a
+                            href="https://all-free-download.com/free-vector/download/compare_infographic_template_elegant_geometric_chart_decor_6933542.html"
+                            >(https://all-free-download.com)</a
+                        >
+                    </li>
+                    <li>
+                        Option infographic template
+                        <a
+                            href="https://all-free-download.com/free-vector/download/option_infographic_template_colorful_modern_circles_decor_6845841.html"
+                            >(https://all-free-download.com)</a
+                        >
+                    </li>
+                    <li>
+                        Soccer poster
+                        <a
+                            href="https://all-free-download.com/free-vector/download/lets_go_soccer_poster_template_dynamic_grunge_contrast_6939936.html"
+                            >(https://all-free-download.com)</a
+                        >
+                    </li>
+                    <li>
+                        Summer sale banner
+                        <a
+                            href="https://all-free-download.com/free-vector/download/summer_sale_banner_template_elegant_leaves_flamingo_6940270.html"
+                            >(https://all-free-download.com)</a
+                        >
+                    </li>
+                </ul>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            <p>BCIT - FWD40</p>
+            <p>For educational purposes only</p>
+        </footer>
     </body>
 </html>
