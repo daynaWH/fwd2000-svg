@@ -229,8 +229,15 @@ body {
 --------------------------------------------- */
 
 main {
-    margin-left: 15rem;
-    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* Main - Desktop View */
+
+@media (min-width: 50em) {
+    main {
+        margin-left: 15rem;
+    }
 }
 
 /* *************** Common Uses **************** */
@@ -513,11 +520,13 @@ main {
 --------------------------------------------- */
 
 footer {
-    margin-left: 15rem;
+    position: sticky;
+    width: 100%;
     background-color: rgb(66, 65, 65);
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 1rem;
+    z-index: 10;
 }
 
 footer p {
