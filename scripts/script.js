@@ -5,13 +5,12 @@ const navBar = document.getElementById("nav-list");
 const navItem = document.querySelectorAll(".navigation li");
 
 navBtn.addEventListener("click", function () {
-    navBar.classList.remove("hide");
     navBar.classList.toggle("open");
 });
 
 navItem.forEach((navItem) =>
     navItem.addEventListener("click", function () {
-        navBar.classList.toggle("hide");
+        navBar.classList.remove("open");
     })
 );
 
