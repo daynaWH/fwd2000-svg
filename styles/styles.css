@@ -20,19 +20,8 @@ html {
     scroll-behavior: smooth;
 }
 
-.image-container img {
-    width: 200px;
-    height: 200px;
-}
 
-.image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
 
-}
 
 
 
@@ -70,6 +59,12 @@ a {
     font-family: "Poppins" sans-serif;
 }
 
+figcaption{
+    font-style: italic;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
 /* Elements
 --------------------------------------------- */
 
@@ -235,6 +230,21 @@ main {
     }
 }
 
+/* *************** Why use an SVG **************** */
+
+.image-container img {
+    width: 200px;
+    height: 200px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
 /* *************** Common Uses **************** */
 
 .use-cases span {
@@ -275,14 +285,6 @@ main {
     padding: 2rem;
 }
 
-.svg-advanced h2 {
-    text-align: center;
-    margin: 2rem 0;
-}
-
-.svg-advanced h3 {
-    text-align: center;
-}
 
 .svg-advanced ul {
     list-style: disc inside;
@@ -297,11 +299,6 @@ main {
 
 /* *************** Interactivity with SVG **************** */
 
-.svg-interactivity h2,
-.svg-interactivity h3 {
-    text-align: center;
-    margin: 2rem 0;
-}
 
 .svg-interactivity p {
     margin: 1rem auto;
@@ -373,29 +370,14 @@ main {
     margin: 0 auto;
 }
 
-.svg-interactivity figcaption,
-.use-cases figcaption,
-.basic-features figcaption {
-    font-style: italic;
-    margin-top: 0.5rem;
-    text-align: center;
-    font-size: 0.9rem;
-}
 
 .svg-interactivity .circle-container figcaption {
     font-style: italic;
     text-align: center;
     font-size: 0.9rem;
 }
+
 /* *************** Tools and Libraries *************** */
-
-.tools-libraries h2 {
-    text-align: center;
-}
-
-.tools-libraries h3 {
-    text-align: center;
-}
 
 .tools-libraries ul {
     list-style: disc inside;
