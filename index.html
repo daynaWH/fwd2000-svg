@@ -4,6 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- CSS -->
         <link rel="stylesheet" href="styles/normalize-fwd.css" />
         <link rel="stylesheet" href="styles/styles.css" />
         <script src="scripts/script.js" defer></script>
@@ -11,22 +19,15 @@
     <body>
         <header>
             <picture>
-                <source
-                    srcset="
-                        images/banner/banner-extra-large.png 1600w,
-                        images/banner/banner-medium.png       800w
-                    "
-                    sizes="(max-width: 85em) calc(100vw - 240px), 75em"
-                    media="(max-width: 60em)"
-                />
                 <img
-                    src="images/banner/banner-large.png"
+                    sizes="(max-width: 1260px) calc(100vw - 60px), 1200px"
                     srcset="
-                        images/banner/banner-large.png 1200w
-                        images/banner/banner-small.png  400w,
+                        images/banner/banner-small.png   400w,
+                        images/banner/banner-medium.png  800w,
+                        images/banner/banner-large.png  1200w
                     "
-                    sizes="calc(100vw - 240px)"
-                    alt="A shoal of goldfish"
+                    src="images/banner/banner-large.jpg"
+                    alt=""
                 />
             </picture>
             <nav class="side-nav">
@@ -49,6 +50,20 @@
         </header>
 
         <main>
+            <!-- Banner Image -->
+            <picture>
+                <img
+                    sizes="(max-width: 1260px) calc(100vw - 60px), 1200px"
+                    srcset="
+                        images/banner/banner-small.png   400w,
+                        images/banner/banner-medium.png  800w,
+                        images/banner/banner-large.png  1200w
+                    "
+                    src="images/banner/banner-large.jpg"
+                    alt=""
+                />
+            </picture>
+
             <!-- What is an SVG? - Stephanie -->
             <section id="intro">
                 <h1>SVG: What is an SVG and when was it created?</h1>
@@ -151,125 +166,123 @@
                     the website. Please find below some examples of the most
                     common use cases of SVG images.
                 </p>
+
+                <h3>Icons</h3>
+                <p>
+                    <span>Icons</span> are one of the most used forms of SVG
+                    files. Examples:
+                </p>
                 <ul>
-                    <li><h3>Icons</h3></li>
-                    <p>
-                        <span>Icons</span> are one of the most used forms of SVG
-                        files. Examples:
-                    </p>
-                    <ul>
-                        <li>Buttons</li>
-                        <li>Navigation Menu</li>
-                        <li>Favicons</li>
-                    </ul>
-
-                    <p>
-                        The icons can be created as needed through programs such
-                        as Illustrator or can be accessed via online resources.
-                        For example, websites such as
-                        <a href="https://iconmonstr.com/">iconmonstr</a> and
-                        <a href="https://www.svgrepo.com/">SVG Repo</a> are
-                        excellent online resources for various SVG vectors and
-                        icons.
-                    </p>
-
-                    <div class="icon-examples">
-                        <img
-                            src="images/common-use/icon-add.svg"
-                            alt="Add favorites button icon"
-                        />
-                        <img
-                            src="images/common-use/icon-btn-up.svg"
-                            alt="Arrow up button icon"
-                        />
-                        <img
-                            src="images/common-use/icon-check.svg"
-                            alt="Check icon"
-                        />
-                        <img
-                            src="images/common-use/icon-close.svg"
-                            alt="Close button icon"
-                        />
-                        <img
-                            src="images/common-use/icon-hamburger.svg"
-                            alt="Hamburger icon"
-                        />
-                        <figcaption>Examples of commonly used icons</figcaption>
-                    </div>
-                    <li><h3>Logos</h3></li>
-                    <p>
-                        <span>Logos</span> are also a largely used examples of
-                        SVG images. Logos in SVG vectors allow for a dynamic
-                        behavior and interactivity to the website. Examples of
-                        the popular commercial logos are as follows:
-                    </p>
-                    <div class="icon-examples">
-                        <img
-                            src="images/common-use/logo-amazon.svg"
-                            alt="Amazon logo"
-                        />
-                        <img
-                            src="images/common-use/logo-apple.svg"
-                            alt="Apple logo"
-                        />
-                        <img
-                            src="images/common-use/logo-mcdonalds.svg"
-                            alt="McDonald's logo"
-                        />
-                        <img
-                            src="images/common-use/logo-google.svg"
-                            alt="Google logo"
-                        />
-                        <img
-                            src="images/common-use/logo-whatsapp.svg"
-                            alt="Whatsapp logo"
-                        />
-                        <figcaption>Examples of brand logos</figcaption>
-                    </div>
-
-                    <li><h3>Infographics</h3></li>
-                    <p>
-                        <span>Infographics</span> another great example of using
-                        SVG. Besides the interactivity, SVG as charts and graphs
-                        allows us to precisely control over the layout of the
-                        data.
-                    </p>
-                    <div class="artwork-examples">
-                        <img
-                            src="images/common-use/compare-infographic.svg"
-                            alt="Compare infographic template"
-                        />
-                        <img
-                            src="images/common-use/option-infographic.svg"
-                            alt="Option infographic template"
-                        />
-                        <figcaption>Examples of infographics</figcaption>
-                    </div>
-                    <li><h3>Illustrations and Artwork</h3></li>
-                    <p>
-                        Usually SVGs are used for simpler images like icons
-                        rather than those with more details, in which case png
-                        or webp are more commonly used. However, SVGs are also
-                        used for
-                        <span>illustrations</span> and more complex artwork due
-                        to its vector-based characteristic. They provide
-                        flexibility without losing its resolution or basically
-                        its quality.
-                    </p>
-                    <div class="artwork-examples">
-                        <img
-                            src="images/common-use/soccer-poster.svg"
-                            alt="Soccer poster"
-                        />
-                        <img
-                            src="images/common-use/summer-sale-banner.svg"
-                            alt="Summer sale banner"
-                        />
-                        <figcaption>
-                            Examples of illustrations created with SVG
-                        </figcaption>
-                    </div>
+                    <li>Buttons</li>
+                    <li>Navigation Menu</li>
+                    <li>Favicons</li>
                 </ul>
+
+                <p>
+                    The icons can be created as needed through programs such as
+                    Illustrator or can be accessed via online resources. For
+                    example, websites such as
+                    <a href="https://iconmonstr.com/">iconmonstr</a> and
+                    <a href="https://www.svgrepo.com/">SVG Repo</a> are
+                    excellent online resources for various SVG vectors and
+                    icons.
+                </p>
+
+                <div class="icon-examples">
+                    <img
+                        src="images/common-use/icon-add.svg"
+                        alt="Add favorites button icon"
+                    />
+                    <img
+                        src="images/common-use/icon-btn-up.svg"
+                        alt="Arrow up button icon"
+                    />
+                    <img
+                        src="images/common-use/icon-check.svg"
+                        alt="Check icon"
+                    />
+                    <img
+                        src="images/common-use/icon-close.svg"
+                        alt="Close button icon"
+                    />
+                    <img
+                        src="images/common-use/icon-hamburger.svg"
+                        alt="Hamburger icon"
+                    />
+                    <figcaption>Examples of commonly used icons</figcaption>
+                </div>
+
+                <h3>Logos</h3>
+                <p>
+                    <span>Logos</span> are also a largely used examples of SVG
+                    images. Logos in SVG vectors allow for a dynamic behavior
+                    and interactivity to the website. Examples of the popular
+                    commercial logos are as follows:
+                </p>
+                <div class="icon-examples">
+                    <img
+                        src="images/common-use/logo-amazon.svg"
+                        alt="Amazon logo"
+                    />
+                    <img
+                        src="images/common-use/logo-apple.svg"
+                        alt="Apple logo"
+                    />
+                    <img
+                        src="images/common-use/logo-mcdonalds.svg"
+                        alt="McDonald's logo"
+                    />
+                    <img
+                        src="images/common-use/logo-google.svg"
+                        alt="Google logo"
+                    />
+                    <img
+                        src="images/common-use/logo-whatsapp.svg"
+                        alt="Whatsapp logo"
+                    />
+                    <figcaption>Examples of brand logos</figcaption>
+                </div>
+
+                <h3>Infographics</h3>
+                <p>
+                    <span>Infographics</span> another great example of using
+                    SVG. Besides the interactivity, SVG as charts and graphs
+                    allows us to precisely control over the layout of the data.
+                </p>
+                <div class="artwork-examples">
+                    <img
+                        src="images/common-use/compare-infographic.svg"
+                        alt="Compare infographic template"
+                    />
+                    <img
+                        src="images/common-use/option-infographic.svg"
+                        alt="Option infographic template"
+                    />
+                    <figcaption>Examples of infographics</figcaption>
+                </div>
+
+                <h3>Illustrations and Artwork</h3>
+                <p>
+                    Usually SVGs are used for simpler images like icons rather
+                    than those with more details, in which case png or webp are
+                    more commonly used. However, SVGs are also used for
+                    <span>illustrations</span> and more complex artwork due to
+                    its vector-based characteristic. They provide flexibility
+                    without losing its resolution or basically its quality.
+                </p>
+                <div class="artwork-examples">
+                    <img
+                        src="images/common-use/soccer-poster.svg"
+                        alt="Soccer poster"
+                    />
+                    <img
+                        src="images/common-use/summer-sale-banner.svg"
+                        alt="Summer sale banner"
+                    />
+                    <figcaption>
+                        Examples of illustrations created with SVG
+                    </figcaption>
+                </div>
             </section>
 
             <!-- Basic Features - Dayna -->
@@ -279,50 +292,48 @@
                     This section introduces some of the basic features that can
                     be applied to SVG when embedded in HTML.
                 </p>
+
+                <h3>Basic Shapes</h3>
                 <ul>
-                    <li><h3>Basic Shapes</h3></li>
-                    <ul>
-                        <li>
-                            <code
-                                >rect, circle, ellipse, line, polyline,
-                                polygon</code
-                            >
-                        </li>
-                    </ul>
-                    <p>
-                        With SVG we can create basic shapes, and each has their
-                        own attributes to define. For example, their dimensions
-                        or radius if it's a circle.
-                    </p>
-                    <p>
-                        The <code>&lt;path&gt;</code> element is used to create
-                        more complex shapes using lines and curves. This element
-                        is often found in SVG files obtained from online
-                        sources. The <code>&lt;d&gt;</code> attribute is used to
-                        define the path.
-                    </p>
-                    <button class="basic-demo-btn">
-                        View Code Demo &#9660;
-                    </button>
-                    <div class="basic-demo-desc">
-                        <pre>
+                    <li>
+                        <code
+                            >rect, circle, ellipse, line, polyline,
+                            polygon</code
+                        >
+                    </li>
+                </ul>
+                <p>
+                    With SVG we can create basic shapes, and each has their own
+                    attributes to define. For example, their dimensions or
+                    radius if it's a circle.
+                </p>
+                <p>
+                    The <code>&lt;path&gt;</code> element is used to create more
+                    complex shapes using lines and curves. This element is often
+                    found in SVG files obtained from online sources. The
+                    <code>&lt;d&gt;</code> attribute is used to define the path.
+                </p>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <pre>
                         &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
                             &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;blue&quot; /&gt;
                             &lt;circle cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;50&quot; fill=&quot;yellow&quot; /&gt;
                         &lt;/svg&gt;
-                        </pre>
-                        <img
-                            src="images/basic-features/basic-shape_1.svg"
-                            alt="Yellow circle inside a blue rectangle"
-                        />
-                        <figcaption>
-                            A yellow circle inside a blue rectangle created with
-                            <code>&lt;circle&gt;</code> and
-                            <code>&lt;rect&gt;</code> elements
-                        </figcaption>
+                        </pre
+                    >
+                    <img
+                        src="images/basic-features/basic-shape_1.svg"
+                        alt="Yellow circle inside a blue rectangle"
+                    />
+                    <figcaption>
+                        A yellow circle inside a blue rectangle created with
+                        <code>&lt;circle&gt;</code> and
+                        <code>&lt;rect&gt;</code> elements
+                    </figcaption>
 
-                        <!-- Code from https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path -->
-                        <pre>
+                    <!-- Code from https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path -->
+                    <pre>
                         &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
                             &lt;path d=&quot;M 10,30
                                     A 20,20 0,0,1 50,30
@@ -330,125 +341,116 @@
                                     Q 90,60 50,90
                                     Q 10,60 10,30 z&quot; /&gt;
                         &lt;/svg&gt;
-                        </pre>
-                        <img
-                            src="images/basic-features/basic-shape_2.png"
-                            alt="A black heart"
-                        />
-                        <figcaption>
-                            A black heart created with the
-                            <code>&lt;path&gt;</code> element
-                        </figcaption>
-                    </div>
+                        </pre
+                    >
+                    <img
+                        src="images/basic-features/basic-shape_2.png"
+                        alt="A black heart"
+                    />
+                    <figcaption>
+                        A black heart created with the
+                        <code>&lt;path&gt;</code> element
+                    </figcaption>
+                </div>
 
-                    <li><h3>Fill</h3></li>
-                    <p>
-                        <code>&lt;fill&gt;</code> sets the color of the inside
-                        of the shapes. Within this element, we can use more
-                        specific attributes:
-                    </p>
-                    <ul>
-                        <li><code>fill-opacity</code>: 0 to 1 | 0 to 100%</li>
-                        <li>
-                            <code>fill-rule</code>: "non-zero" | "evenodd"
-                            <ul>
-                                <li>
-                                    <code>&lt;fill-rule&gt;</code>
-                                    sets the color of the part where the shapes
-                                    overlap.
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <button class="basic-demo-btn">
-                        View Code Demo &#9660;
-                    </button>
-                    <div class="basic-demo-desc">
-                        <!-- points value from https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule -->
-                        <pre>
+                <h3>Fill</h3>
+                <p>
+                    <code>&lt;fill&gt;</code> sets the color of the inside of
+                    the shapes. Within this element, we can use more specific
+                    attributes:
+                </p>
+                <ul>
+                    <li><code>fill-opacity</code>: 0 to 1 | 0 to 100%</li>
+                    <li>
+                        <code>fill-rule</code>: "non-zero" | "evenodd"
+                        <ul>
+                            <li>
+                                <code>&lt;fill-rule&gt;</code>
+                                sets the color of the part where the shapes
+                                overlap.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <!-- points value from https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule -->
+                    <pre>
                     &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
                         &lt;polygon fill=&quot;green&quot; fill-opacity=&quot;0.5&quot; fill-rule=&quot;evenodd&quot;
                                 points=&quot;50,0 21,90 98,35 2,35 79,90&quot; /&gt;
                     &lt;/svg&gt;
-                    </pre
-                        >
-                        <img
-                            src="images/basic-features/fill-rule.svg"
-                            alt="Green star that is transparent in the middle"
-                        />
-                        <figcaption>
-                            A star with <code>&lt;fill-rule&gt;</code> set to
-                            "evenodd"
-                        </figcaption>
-                    </div>
+                    </pre>
+                    <img
+                        src="images/basic-features/fill-rule.svg"
+                        alt="Green star that is transparent in the middle"
+                    />
+                    <figcaption>
+                        A star with <code>&lt;fill-rule&gt;</code> set to
+                        "evenodd"
+                    </figcaption>
+                </div>
 
-                    <li><h3>Stroke</h3></li>
-                    <p>
-                        While fill affects the color of the inside,
-                        <code>&lt;stroke&gt;</code> sets the color of the border
-                        of the shapes. Stroke also has multiple attributes such
-                        as stroke-width, opacity, linecap and linejoin.
-                    </p>
-                    <ul>
-                        <li><code>stroke-width</code></li>
-                        <li><code>stroke-opacity</code></li>
-                        <li>
-                            <code>stroke-linecap</code>: "butt" | "round" |
-                            "square"
-                            <ul>
-                                <li>
-                                    <code>&lt;Linecap&gt;</code> defines how the
-                                    end of the stroke is, for example, rounded
-                                    or angled.
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <code>stroke-linejoin</code>: "miter" | "bevel" |
-                            "round"
-                            <ul>
-                                <li>
-                                    The <code>&lt;line-join&gt;</code> property
-                                    sets how the meeting point of the strokes
-                                    look.
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <button class="basic-demo-btn">
-                        View Code Demo &#9660;
-                    </button>
-                    <div class="basic-demo-desc">
-                        <img
-                            src="images/basic-features/stroke-linecap.svg"
-                            alt="Three lines with butt, round and square stroke-linecap"
-                        />
-                        <img
-                            src="images/basic-features/stroke-linejoin.svg"
-                            alt="Three triangles with miter, bevel and round stroke-linejoin"
-                        />
-                    </div>
+                <h3>Stroke</h3>
+                <p>
+                    While fill affects the color of the inside,
+                    <code>&lt;stroke&gt;</code> sets the color of the border of
+                    the shapes. Stroke also has multiple attributes such as
+                    stroke-width, opacity, linecap and linejoin.
+                </p>
+                <ul>
+                    <li><code>stroke-width</code></li>
+                    <li><code>stroke-opacity</code></li>
+                    <li>
+                        <code>stroke-linecap</code>: "butt" | "round" | "square"
+                        <ul>
+                            <li>
+                                <code>&lt;Linecap&gt;</code> defines how the end
+                                of the stroke is, for example, rounded or
+                                angled.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <code>stroke-linejoin</code>: "miter" | "bevel" |
+                        "round"
+                        <ul>
+                            <li>
+                                The <code>&lt;line-join&gt;</code> property sets
+                                how the meeting point of the strokes look.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <img
+                        src="images/basic-features/stroke-linecap.svg"
+                        alt="Three lines with butt, round and square stroke-linecap"
+                    />
+                    <img
+                        src="images/basic-features/stroke-linejoin.svg"
+                        alt="Three triangles with miter, bevel and round stroke-linejoin"
+                    />
+                </div>
 
-                    <li><h3>Gradient</h3></li>
-                    <ul>
-                        <li><code>linearGradient</code></li>
-                        <li><code>radialGradient</code></li>
-                    </ul>
-                    <p>
-                        Two types of gradient are used to create color
-                        gradations in SVG; linear or radial. They each use
-                        different attributes. For example, linearGradient uses
-                        x1, x2, y1, y2 while radialGradient uses cx, cy, fx, fy,
-                        and r and both include offset and stop-color. The
-                        attributes are defined within the
-                        <code>&lt;linearGradient&gt;</code> tag element, which
-                        is nested within the <code>&lt;defs&gt;</code> element.
-                    </p>
-                    <button class="basic-demo-btn">
-                        View Code Demo &#9660;
-                    </button>
-                    <div class="basic-demo-desc">
-                        <pre>
+                <h3>Gradient</h3>
+                <ul>
+                    <li><code>linearGradient</code></li>
+                    <li><code>radialGradient</code></li>
+                </ul>
+                <p>
+                    Two types of gradient are used to create color gradations in
+                    SVG; linear or radial. They each use different attributes.
+                    For example, linearGradient uses x1, x2, y1, y2 while
+                    radialGradient uses cx, cy, fx, fy, and r and both include
+                    offset and stop-color. The attributes are defined within the
+                    <code>&lt;linearGradient&gt;</code> tag element, which is
+                    nested within the <code>&lt;defs&gt;</code> element.
+                </p>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <pre>
                         &lt;svg viewBox=&quot;-20 30 300 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
                             &lt;defs&gt;
                                 &lt;linearGradient id=&quot;linear-grad&quot; x1=&quot;0&quot; x2=&quot;50%&quot; y1=&quot;50%&quot;y2=&quot;0&quot;&gt;
@@ -465,55 +467,52 @@
                             &lt;circle cx=&quot;0&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;url(#linear-grad)&quot; /&gt;
                             &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;url(#radial-grad)&quot; /&gt;
                         &lt;/svg&gt;
-                        </pre>
-                        <img
-                            src="images/basic-features/gradient.png"
-                            alt="Two circles with linear and radial gradients, respectively"
-                        />
-                        <figcaption>
-                            Circles with linear and radial gradients,
-                            respectively
-                        </figcaption>
-                    </div>
+                        </pre
+                    >
+                    <img
+                        src="images/basic-features/gradient.png"
+                        alt="Two circles with linear and radial gradients, respectively"
+                    />
+                    <figcaption>
+                        Circles with linear and radial gradients, respectively
+                    </figcaption>
+                </div>
 
-                    <li><h3>Transform</h3></li>
-                    <p>
-                        Another basic feature of SVG is
-                        <code>&lt;transform&gt;</code>, which is similar to the
-                        transform property in CSS. It applies transformation to
-                        elements nested in the svg element, and multiple
-                        transformations can be added at the same time. Some
-                        examples of transform are listed below.
-                    </p>
-                    <ul>
-                        <li><code>translate</code> (x y)</li>
-                        <li><code>rotate</code> (degree)</li>
-                        <li><code>scale</code> (x y)</li>
-                        <li>
-                            <code>skewX</code> (degree)
-                            <code>skewY</code> (degree)
-                        </li>
-                    </ul>
-                    <button class="basic-demo-btn">
-                        View Code Demo &#9660;
-                    </button>
-                    <div class="basic-demo-desc">
-                        <pre>
+                <h3>Transform</h3>
+                <p>
+                    Another basic feature of SVG is
+                    <code>&lt;transform&gt;</code>, which is similar to the
+                    transform property in CSS. It applies transformation to
+                    elements nested in the svg element, and multiple
+                    transformations can be added at the same time. Some examples
+                    of transform are listed below.
+                </p>
+                <ul>
+                    <li><code>translate</code> (x y)</li>
+                    <li><code>rotate</code> (degree)</li>
+                    <li><code>scale</code> (x y)</li>
+                    <li>
+                        <code>skewX</code> (degree) <code>skewY</code> (degree)
+                    </li>
+                </ul>
+                <button class="basic-demo-btn">View Code Demo &#9660;</button>
+                <div class="basic-demo-desc">
+                    <pre>
                         &lt;svg height=&quot;300&quot; width=&quot;500&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
                             &lt;rect height=&quot;100&quot; width=&quot;200&quot; y=&quot;70&quot; /&gt;
                             &lt;rect height=&quot;100&quot; width=&quot;200&quot; transform=&quot;translate(400 10) scale(1.2 0.8) rotate(90) skewX(30)&quot; /&gt;
                         &lt;/svg&gt;
-                        </pre>
-                        <img
-                            src="images/basic-features/transform.svg"
-                            alt="One black rectangle and another with transform properties"
-                        />
-                        <figcaption>
-                            Default rectangle and Rectangle with
-                            <code>&lt;transform&gt;</code> property applied
-                        </figcaption>
-                    </div>
-                </ul>
+                        </pre
+                    >
+                    <img
+                        src="images/basic-features/transform.svg"
+                        alt="One black rectangle and another with transform properties"
+                    />
+                    <figcaption>
+                        Default rectangle and Rectangle with
+                        <code>&lt;transform&gt;</code> property applied
+                    </figcaption>
+                </div>
             </section>
 
             <!-- Advanced svg features - Emerson -->
