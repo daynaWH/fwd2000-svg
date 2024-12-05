@@ -27,17 +27,16 @@ html {
 
 .image-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
     padding: 10px;
+
 }
 
-.fig-cap {
-    display: flex;
-    justify-content: space-between;
-    padding: 2px;
-    margin: 0 auto;
-}
+
+
+
 
 /* Typography
 --------------------------------------------- */
