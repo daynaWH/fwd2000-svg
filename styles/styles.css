@@ -149,6 +149,7 @@ section {
 
 body {
     margin: 0;
+    overscroll-behavior: none;
 }
 
 /* Navigation */
@@ -196,14 +197,6 @@ body {
     color: rgb(255, 255, 255);
 }
 
-/* Hide navigation upon clicking the link */
-
-@media (max-width: 50em) {
-    .navigation ol.hide {
-        display: none;
-    }
-}
-
 /* Navigation - Desktop View */
 
 @media (min-width: 50em) {
@@ -211,11 +204,13 @@ body {
         display: none;
     }
 
-    .navigation ol {
+    .navigation ol,
+    .navigation ol.open {
         position: fixed;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: baseline;
         width: 15rem;
         height: 100%;
         margin: 0;
