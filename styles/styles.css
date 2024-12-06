@@ -20,7 +20,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 /* Typography
 --------------------------------------------- */
 
@@ -53,12 +52,13 @@ a {
     font-family: "Poppins" sans-serif;
 }
 
-figcaption{
+figcaption {
     font-style: italic;
     margin-top: 0.5rem;
     text-align: center;
     font-size: 0.9rem;
 }
+
 /* Elements
 --------------------------------------------- */
 
@@ -227,8 +227,8 @@ main {
 /* *************** Why use an SVG **************** */
 
 .image-container img {
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
 }
 
 .image-container {
@@ -255,7 +255,7 @@ main {
 }
 
 .artwork-examples img {
-    height: 8rem;
+    height: 12rem;
 }
 
 /* *************** Basic Features **************** */
@@ -279,7 +279,6 @@ main {
     padding: 2rem;
 }
 
-
 .svg-advanced ul {
     list-style: disc inside;
     margin: 1rem auto;
@@ -292,7 +291,6 @@ main {
 }
 
 /* *************** Interactivity with SVG **************** */
-
 
 .svg-interactivity p {
     margin: 1rem auto;
@@ -363,7 +361,6 @@ main {
     display: block;
     margin: 0 auto;
 }
-
 
 .svg-interactivity .circle-container figcaption {
     font-style: italic;
